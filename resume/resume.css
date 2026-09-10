@@ -50,6 +50,11 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    margin-top: 1em;
+}
+
+.job h3:nth-last-child(2) {
+    border-bottom: 1px solid #888;
 }
 
 .job h3 .job-company,
@@ -137,6 +142,11 @@ a {
     margin-top: 3pt;
 }
 
+.comment {
+    font-size: 9pt;
+    font-family: "Nunito", "Spectral", Georgia, serif;
+    color: #444;
+}
 @media print {
 
     h2,

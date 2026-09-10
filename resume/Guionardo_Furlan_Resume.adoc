@@ -65,7 +65,7 @@ _Levva is a software development consultancy focused on tailored digital solutio
 
 
 [.tech-stack]
-*Tech Stack:* Python (Flask, scripting, Apache Airflow), Fintech / Core-Banking Integrations, Microservices.
+*Tech Stack:* Python (Flask, scripting, Apache Airflow), Google Cloud.
 
 
 [.job]
@@ -117,11 +117,8 @@ _Time Informática provides commercial enterprise ERP systems and operational de
 https://github.com/escoteirando[GitHub]
 
 * Escoteirando Suite is a unified digital platform for the Brazilian Scout Association (UEB) that brings together the everyday tools scout leaders and families need to run their groups — in one coordinated ecosystem. Instead of a pile of disconnected apps, it offers a single, consistent experience where every product speaks the same language and shares the same login, so a scout leader moves seamlessly between managing their troop, planning activities, and tracking progress without relearning a new system each time.
-* For the people on the ground, the suite delivers concrete value: a clear sidebar navigation for troop management, advancement and badge tracking, event planning, and a financial tracker; a metrics dashboard with KPI cards so leaders see the health of their group at a glance; an interactive roster with status badges and quick actions; and guided multi-step wizards for complex tasks like running an event or recording advancement. A unified, premium yet practical visual identity ("tactical-clean outdoor gear meets enterprise SaaS") makes the tools feel coherent and trustworthy across every screen. Because scout activities often happen off the grid, the platform is designed offline-first, and it is built privacy-first from day one to protect the data of minors under LGPD.
-* The bigger picture is coordination and scale: the Suite lets the escoteirando organization roll out new capabilities across 18+ existing scout repositories without fragmenting the experience, while keeping a single, secure sign-on and shared standards so any local group in Brazil can adopt the tools. It is positioned to start with a specific group and scale to any UEB troop nationwide — turning scattered volunteer effort into a standardized, reliable operating backbone for Brazilian scouting.
-* Architecturally, the suite is deliberately polyglot: the guiding decision is to standardize contracts, not languages. Each project is versioned independently via git submodules, and ideas evolve through a traceable Issue → RFD (discussion) → ADR (decision) → Skill pipeline. Shared infrastructure is centralized on Supabase (PostgreSQL + Auth + Storage), while compliance constraints — LGPD data-protection law and the privacy of minors — are treated as day-one requirements, alongside an offline-first stance for field activities without connectivity. An AI-agent-first discipline keeps every project consistent for automated development.
-* The chosen stack is expressed through three opinionated reference profiles: Python 3.13 + FastAPI for data APIs, Go 1.25 + Chi v5 for high-performance proxies and the auth service, and Vue 3.5 + Nuxt 4 + TypeScript for web frontends (TypeScript is mandatory for any Node project). Concretely this has produced a Go/Chi auth-service with a unified multi-provider login contract, a FastAPI Pessoas (people) API with unified-identity merging, and a Nuxt 4 unified frontend — currently gaining a v1.4 design system built on Tailwind CSS v4 design tokens for a cohesive, reusable component library.
 
+[.comment]
 _This is a work-in-progress._
 
 

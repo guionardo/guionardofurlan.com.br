@@ -60,7 +60,7 @@ _A Levva é uma consultoria de desenvolvimento de software focada em soluções 
 * Trabalhei em integrações entre operações de back-office, plataformas de core banking e serviços internos, simplificando o fluxo de dados entre sistemas.
 
 [.tech-stack]
-*Tecnologias:* Python (Flask, scripting, Apache Airflow), Integrações Fintech / Core Banking, Microsserviços.
+*Tecnologias:* Python (Flask, scripting, Apache Airflow), Google Cloud.
 
 [.job]
 === [.job-title]#Engenheiro de Software Sênior# [.job-company]#AmbevTech# [.job-where]#Blumenau, BR (Presencial/híbrido)# [.job-dates]#08/2019 – 01/2024#
@@ -108,11 +108,8 @@ _A Time Informática fornece sistemas ERP comerciais e ferramentas operacionais 
 https://github.com/escoteirando[GitHub]
 
 * A Escoteirando Suite é uma plataforma digital unificada para os Escoteiros do Brasil (UEB) que reúne as ferramentas cotidianas necessárias para que escotistas e famílias conduzam seus grupos em um ecossistema coordenado. Em vez de aplicativos desconectados, oferece uma experiência consistente, na qual todos os produtos compartilham a mesma linguagem e o mesmo login. Assim, um escotista pode alternar entre a gestão da seção, o planejamento de atividades e o acompanhamento da progressão sem reaprender um sistema a cada etapa.
-* Para quem atua no dia a dia, a suite oferece navegação lateral para gestão de seções, acompanhamento de progressão e distintivos, planejamento de eventos e controle financeiro; um painel de indicadores com cartões de KPI para acompanhar a situação do grupo; uma lista interativa de integrantes com indicadores de status e ações rápidas; e assistentes guiados para tarefas complexas, como organizar eventos ou registrar progressão. Uma identidade visual unificada, sofisticada e prática, que combina equipamentos de atividades ao ar livre com SaaS empresarial, mantém a coerência entre as telas. Como as atividades escoteiras frequentemente ocorrem sem conexão, a plataforma foi concebida como offline-first e com privacidade desde o início, para proteger os dados de menores conforme a LGPD.
-* A visão mais ampla é de coordenação e escala: a suite permite à organização escoteirando distribuir novas funcionalidades por mais de 18 repositórios escoteiros existentes sem fragmentar a experiência, mantendo autenticação única segura e padrões compartilhados para adoção por grupos locais em todo o Brasil. A proposta é começar com um grupo específico e expandir para qualquer seção da UEB no país, transformando esforços voluntários dispersos em uma base operacional padronizada e confiável para o escotismo brasileiro.
-* Arquiteturalmente, a suite é deliberadamente poliglota: a decisão orientadora é padronizar contratos, não linguagens. Cada projeto é versionado de forma independente por submódulos Git, e as ideias evoluem por um fluxo rastreável de Issue → RFD (discussão) → ADR (decisão) → Skill. A infraestrutura compartilhada é centralizada no Supabase (PostgreSQL + Auth + Storage), enquanto a LGPD e a privacidade de menores são tratadas como requisitos desde o início, junto à abordagem offline-first para atividades de campo sem conectividade. Uma disciplina orientada a agentes de IA mantém a consistência entre os projetos para desenvolvimento automatizado.
-* A stack escolhida se organiza em três perfis de referência: Python 3.13 + FastAPI para APIs de dados, Go 1.25 + Chi v5 para proxies de alto desempenho e o serviço de autenticação, e Vue 3.5 + Nuxt 4 + TypeScript para interfaces web (TypeScript é obrigatório em qualquer projeto Node). Isso já resultou em um serviço de autenticação Go/Chi com contrato unificado de login com múltiplos provedores, uma API Pessoas em FastAPI com unificação de identidades e um frontend unificado em Nuxt 4, que está recebendo um sistema de design v1.4 baseado em tokens do Tailwind CSS v4 para uma biblioteca de componentes coesa e reutilizável.
 
+[.comment]
 _Este projeto está em desenvolvimento._
 
 == Formação
