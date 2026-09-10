@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import { getPosts, formatDate } from '../lib/content';
+const posts = (await getPosts()).slice(0, 3);
+---
+<Base title="Início">
+  <section class="hero">
+    <p class="eyebrow">GUIONARDO FURLAN / ESPAÇO PESSOAL</p>
+    <h1>Ideias, código<br />e o que vem <em>depois.</em></h1>
+    <div class="hero-bottom"><p>Um lugar para compartilhar o que aprendo, apresentar o que desenvolvo e conectar os próximos projetos.</p><a class="button" href="/sobre/">Conheça minha trajetória <span>↗</span></a></div>
+  </section>
+  <section class="section"><div class="section-heading"><h2>Explore o portal</h2><span class="eyebrow">01 — CONEXÕES</span></div>
+    <div class="grid">
+      <a class="card" href="/blog/"><span class="number">01 / BLOG</span><h3>Ideias por escrito.</h3><p>Artigos, aprendizados e reflexões sobre desenvolvimento.</p><span class="card-link">Ler artigos ↗</span></a>
+      <a class="card" href="/projetos/"><span class="number">02 / PROJETOS</span><h3>Do problema à solução.</h3><p>Projetos e trabalhos: contexto, escolhas e resultados.</p><span class="card-link">Explorar projetos ↗</span></a>
+      <a class="card dark" href="/ferramentas/"><span class="number">03 / FERRAMENTAS</span><h3>Código em uso.</h3><p>O ponto de entrada para ferramentas e produtos que desenvolvo.</p><span class="card-link">Conhecer ferramentas ↗</span></a>
+    </div>
+  </section>
+  <section class="section"><div class="section-heading"><h2>Últimas publicações</h2><a href="/blog/">Todos os artigos ↗</a></div>
+    {posts.length ? posts.map(post => <a class="post-row" href={`/blog/${post.data.slug}/`}><div><p class="eyebrow">{formatDate(post.data.date)}</p><h3>{post.data.title}</h3><p>{post.data.description}</p></div><span aria-hidden="true">↗</span></a>) : <div class="empty"><h3>Os primeiros artigos estão a caminho.</h3><p>Este espaço reunirá novas publicações e aprendizados.</p></div>}
+  </section>
+</Base>

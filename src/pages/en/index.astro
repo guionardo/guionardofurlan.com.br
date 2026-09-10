@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getPosts, formatDate } from '../../lib/content';
+const posts = (await getPosts('en')).slice(0, 3);
+---
+<Base title="Home">
+  <section class="hero">
+    <p class="eyebrow">GUIONARDO FURLAN / PERSONAL SPACE</p>
+    <h1>Ideas, code<br />and what comes <em>next.</em></h1>
+    <div class="hero-bottom"><p>A place to share what I learn, showcase what I build and connect the next projects.</p><a class="button" href="/en/about/">Get to know me <span>↗</span></a></div>
+  </section>
+  <section class="section"><div class="section-heading"><h2>Explore the site</h2><span class="eyebrow">01 — CONNECTIONS</span></div>
+    <div class="grid">
+      <a class="card" href="/en/blog/"><span class="number">01 / BLOG</span><h3>Ideas in writing.</h3><p>Articles, lessons and reflections on development.</p><span class="card-link">Read articles ↗</span></a>
+      <a class="card" href="/en/projects/"><span class="number">02 / PROJECTS</span><h3>From problem to solution.</h3><p>Projects and work: context, decisions and outcomes.</p><span class="card-link">Explore projects ↗</span></a>
+      <a class="card dark" href="/en/tools/"><span class="number">03 / TOOLS</span><h3>Code at work.</h3><p>The starting point for tools and products I develop.</p><span class="card-link">Discover tools ↗</span></a>
+    </div>
+  </section>
+  <section class="section"><div class="section-heading"><h2>Latest articles</h2><a href="/en/blog/">All articles ↗</a></div>
+    {posts.length ? posts.map(post => <a class="post-row" href={`/en/blog/${post.data.slug}/`}><div><p class="eyebrow">{formatDate(post.data.date, 'en')}</p><h3>{post.data.title}</h3><p>{post.data.description}</p></div><span aria-hidden="true">↗</span></a>) : <div class="empty"><h3>The first articles are on their way.</h3><p>New articles and lessons will appear here.</p></div>}
+  </section>
+</Base>

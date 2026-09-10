@@ -1,0 +1,40 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="vfp-inspect" description="Entenda seu Visual FoxPro antes de modernizá-lo: conhecimento navegável, requisitos rastreáveis e migração baseada em evidências." alternate="/en/projects/vfp-inspect/">
+  <article class="project-detail">
+    <a href="/projetos/">← Todos os projetos</a>
+    <header class="page-intro">
+      <span class="project-status">Em desenvolvimento</span>
+      <h1>vfp-inspect<span class="accent">.</span></h1>
+      <h2>Entenda seu Visual FoxPro antes de modernizá-lo</h2>
+      <p>Transforme uma base Visual FoxPro legada em conhecimento navegável, requisitos rastreáveis e um plano de migração baseado em evidências.</p>
+      <div class="tags"><span>Visual FoxPro</span><span>Modernização de legado</span><span>Análise de código</span></div>
+    </header>
+    <div class="prose project-copy">
+      <p>Sistemas Visual FoxPro que sustentam processos importantes costumam carregar anos de regras de negócio espalhadas entre forms, PRGs, eventos, aliases, work areas, cursores e integrações. O maior risco de uma modernização não é escrever o novo sistema: é descobrir tarde demais um comportamento que ninguém sabia que existia.</p>
+      <p>O <strong>vfp-inspect</strong> foi criado para reduzir esse risco.</p>
+      <h2>Do código legado para um mapa do sistema</h2>
+      <p>A ferramenta reconstrói inventário, dependências, leitura/escrita de dados, telas e workflows, comportamento estrutural, casos de uso, domínios funcionais candidatos, riscos técnicos, arquitetura de migração e requisitos observados com rastreabilidade até o código.</p>
+      <blockquote><p><strong>Que comportamento precisa sobreviver à migração?</strong></p></blockquote>
+      <p>O vfp-inspect não parte da premissa de que um arquivo VFP deva virar uma classe ou serviço equivalente. Primeiro organiza o comportamento que precisa ser preservado; depois entrega esse conhecimento para pessoas e agentes de software.</p>
+      <h2>Evidência antes de opinião</h2>
+      <table><caption>Classificação das conclusões da análise</caption><thead><tr><th scope="col">Classe</th><th scope="col">Significado</th></tr></thead><tbody><tr><th scope="row">Observed</th><td>Sustentada diretamente pelo código analisado.</td></tr><tr><th scope="row">Inferred</th><td>Interpretação provável que ainda precisa de validação.</td></tr><tr><th scope="row">Open question</th><td>Comportamento que não pôde ser determinado com segurança.</td></tr></tbody></table>
+      <h2>Explore visualmente</h2>
+      <pre class="command"><code>vfp-inspect web ./meu-projeto</code></pre>
+      <p>O Web Explorer apresenta símbolos, dependências, telas, dados, casos de uso, riscos, arquitetura de migração e evidências. Diagramas Mermaid ajudam a visualizar dependências, comportamento, dados, casos de uso e migração.</p>
+      <h2>Modernização incremental</h2>
+      <p>O vfp-inspect ajuda a dividir a modernização em capacidades funcionais e incrementos verificáveis, com coexistência, camada anticorrupção quando necessária, critérios de paridade, validação de dados e rollback.</p>
+      <h2>Para quem</h2>
+      <ul><li><strong>Manutenção:</strong> investigação mais rápida e menos dependência de conhecimento tribal.</li><li><strong>Arquitetura:</strong> acoplamentos e boundaries candidatos antes da decisão da solução futura.</li><li><strong>Modernização:</strong> requisitos verificáveis e sequência incremental antes do rewrite.</li><li><strong>IA aplicada:</strong> contexto estruturado e evidência em vez de milhares de arquivos sem mapa.</li></ul>
+      <h2>Exemplo de corpus</h2>
+      <p>No AUTOCOM, corpus usado durante o desenvolvimento, foram reconstruídos:</p>
+      <dl class="project-metrics"><div><dt>Casos de uso candidatos</dt><dd>25</dd></div><div><dt>Entidades / data targets</dt><dd>46</dd></div><div><dt>Eventos de UI</dt><dd>107</dd></div><div><dt>Requisitos observados</dt><dd>841</dd></div></dl>
+      <p>Todos os <strong>841 requisitos</strong> têm evidência associada. Esses números descrevem apenas o corpus de desenvolvimento; não são promessa de resultado universal.</p>
+      <h2>O que não prometemos</h2>
+      <p>Não prometemos tradução automática perfeita, descoberta infalível de comportamento dinâmico, que co-usage seja foreign key, que clusters sejam automaticamente microservices ou substituição da validação de especialistas.</p>
+      <p>A proposta é mais útil: <strong>reduzir a incerteza e tornar verificável o conhecimento usado para tomar decisões de manutenção e migração.</strong></p>
+      <p class="project-closing">Conheça. Explore. Verifique. Modernize.</p>
+    </div>
+  </article>
+</Base>

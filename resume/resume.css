@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+@page {
+    size: a4;
+    margin: 0.48in 0.5in 0.48in;
+}
+
+body {
+    font-family: "Spectral", Georgia, serif;
+    font-size: 10pt;
+    line-height: 1.22;
+    color: #171717;
+    max-width: none;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Spectral", Georgia, serif;
+    font-size: 16pt;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 0 4pt;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    font-family: "Nunito", "Spectral", Georgia, serif;
+    font-size: 11pt;
+    font-weight: 700;
+    color: #294dc2;
+    margin: 12pt 0 5pt;
+}
+
+h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #888;
+    margin-left: 8pt;
+}
+
+h3 {
+    font-size: 10pt;
+    font-weight: 700;
+    margin: 9pt 0 2pt;
+}
+
+.job h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.job h3 .job-company,
+.job h3 .job-dates {
+    font-weight: 700;
+}
+
+.job h3 .job-company {
+    text-decoration: underline;
+}
+
+.job h3 .job-where {
+    font-style: italic;
+    font-weight: 400;
+    color: #444;
+}
+
+p {
+    margin: 0 0 5pt;
+}
+
+.company-description {
+    font-style: italic;
+    color: #444;
+}
+
+ul {
+    margin: 2pt 0 5pt;
+    padding-left: 19pt;
+    font-family: "Nunito", "Spectral", Georgia, serif;
+    font-size: 9pt;
+}
+
+ul::marker {
+    color: #294dc2;
+}
+
+li {
+    margin: 0 0 3pt;
+    padding-left: 1pt;
+}
+
+li::marker {
+    color: #294dc2;
+}
+
+.contact {
+    text-align: center;
+    color: #244061;
+    font-size: 10pt;
+    margin-bottom: 9pt;
+}
+
+.contact img {
+    height: 8pt;
+    width: auto;
+    vertical-align: middle;
+    margin: 0 2pt;
+}
+
+a {
+    color: #244061;
+    text-decoration: underline;
+}
+
+.company-description {
+    font-style: italic;
+    font-size: 9pt;
+    font-family: "Nunito", "Spectral", Georgia, serif;
+}
+
+.tech-stack {
+    font-size: 9pt;
+    font-family: "Nunito", "Spectral", Georgia, serif;
+    color: #444;
+}
+
+.job {
+    font-size: 10pt;
+    font-family: "Nunito", "Spectral", Georgia, serif;
+    break-inside: avoid-page;
+}
+
+.job+p {
+    margin-top: 3pt;
+}
+
+@media print {
+
+    h2,
+    h3 {
+        break-after: avoid;
+    }
+
+    li {
+        break-inside: avoid;
+    }
+}

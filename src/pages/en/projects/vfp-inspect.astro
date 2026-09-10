@@ -1,0 +1,40 @@
+---
+import Base from '../../../layouts/Base.astro';
+---
+<Base title="vfp-inspect" description="Understand your Visual FoxPro system before modernizing it: navigable knowledge, traceable requirements and evidence-based migration." alternate="/projetos/vfp-inspect/">
+  <article class="project-detail">
+    <a href="/en/projects/">← All projects</a>
+    <header class="page-intro">
+      <span class="project-status">In development</span>
+      <h1>vfp-inspect<span class="accent">.</span></h1>
+      <h2>Understand your Visual FoxPro system before modernizing it</h2>
+      <p>Turn a legacy Visual FoxPro codebase into navigable knowledge, traceable requirements and an evidence-based migration plan.</p>
+      <div class="tags"><span>Visual FoxPro</span><span>Legacy modernization</span><span>Code analysis</span></div>
+    </header>
+    <div class="prose project-copy">
+      <p>Visual FoxPro systems that support important processes often carry years of business rules spread across forms, PRGs, events, aliases, work areas, cursors and integrations. The biggest risk in modernization is not writing the new system: it is discovering too late a behavior that nobody knew existed.</p>
+      <p><strong>vfp-inspect</strong> was created to reduce that risk.</p>
+      <h2>From legacy code to a system map</h2>
+      <p>The tool reconstructs the inventory, dependencies, data reads and writes, screens and workflows, structural behavior, use cases, candidate functional domains, technical risks, migration architecture and observed requirements, with traceability back to the code.</p>
+      <blockquote><p><strong>Which behaviors need to survive the migration?</strong></p></blockquote>
+      <p>vfp-inspect does not assume that a VFP file should become an equivalent class or service. It first organizes the behavior that must be preserved, then makes that knowledge available to people and software agents.</p>
+      <h2>Evidence before opinion</h2>
+      <table><caption>Classification of analysis findings</caption><thead><tr><th scope="col">Class</th><th scope="col">Meaning</th></tr></thead><tbody><tr><th scope="row">Observed</th><td>Directly supported by the analyzed code.</td></tr><tr><th scope="row">Inferred</th><td>A likely interpretation that still needs validation.</td></tr><tr><th scope="row">Open question</th><td>Behavior that could not be reliably determined.</td></tr></tbody></table>
+      <h2>Explore visually</h2>
+      <pre class="command"><code>vfp-inspect web ./meu-projeto</code></pre>
+      <p>The Web Explorer presents symbols, dependencies, screens, data, use cases, risks, migration architecture and evidence. Mermaid diagrams help visualize dependencies, behavior, data, use cases and migration.</p>
+      <h2>Incremental modernization</h2>
+      <p>vfp-inspect helps divide modernization into functional capabilities and verifiable increments, with coexistence, an anti-corruption layer when needed, parity criteria, data validation and rollback.</p>
+      <h2>Who it is for</h2>
+      <ul><li><strong>Maintenance:</strong> faster investigation and less reliance on tribal knowledge.</li><li><strong>Architecture:</strong> couplings and candidate boundaries before deciding on the future solution.</li><li><strong>Modernization:</strong> verifiable requirements and an incremental sequence before a rewrite.</li><li><strong>Applied AI:</strong> structured context and evidence instead of thousands of files without a map.</li></ul>
+      <h2>Example corpus</h2>
+      <p>In AUTOCOM, the corpus used during development, the tool reconstructed:</p>
+      <dl class="project-metrics"><div><dt>Candidate use cases</dt><dd>25</dd></div><div><dt>Entities / data targets</dt><dd>46</dd></div><div><dt>UI events</dt><dd>107</dd></div><div><dt>Observed requirements</dt><dd>841</dd></div></dl>
+      <p>All <strong>841 requirements</strong> have associated evidence. These numbers describe only the development corpus; they are not a promise of universal results.</p>
+      <h2>What we do not promise</h2>
+      <p>We do not promise perfect automatic translation, infallible discovery of dynamic behavior, that co-usage implies a foreign key, that clusters are automatically microservices, or a replacement for expert validation.</p>
+      <p>The aim is more useful: <strong>reduce uncertainty and make the knowledge used for maintenance and migration decisions verifiable.</strong></p>
+      <p class="project-closing">Discover. Explore. Verify. Modernize.</p>
+    </div>
+  </article>
+</Base>

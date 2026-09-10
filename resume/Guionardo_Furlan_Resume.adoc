@@ -1,0 +1,142 @@
+= Guionardo Furlan
+:doctype: article
+:encoding: utf-8
+:lang: en
+:sectnums!:
+:toc!:
+:icons: font
+:stylesheet: resume.css
+:linkcss:
+:source-highlighter: none
+
+[.contact]
+image:icons/linkedin.png[LinkedIn] https://www.linkedin.com/in/guionardo[LinkedIn] | image:icons/phone.png[Phone] +55 (47) 98805-0705 | image:icons/email.png[Email] mailto:guionardo@guionardofurlan.com.br[guionardo@guionardofurlan.com.br] | image:icons/github.png[GitHub] https://github.com/guionardo[GitHub]
+
+
+== Skills
+
+* GoLang, Python, C#, Cloud & DevOps (MS Azure, GCP), System Design, Microservices, APIs, Docker, Linux
+* MySQL, MariaDB, PostgreSQL, SQL Server, SQLite, Oracle
+* Unit Testing & Integration Testing (TDD), Docker, Kubernetes, Bash, JavaScript, PHP, Virtualization, IoT (Raspberry Pi/Arduino), AI-assisted development
+* Languages: Portuguese (native), English (intermediate level)
+
+== Experience
+
+
+[.job]
+=== [.job-title]#Senior Software Engineer# [.job-company]#WK Sistemas# [.job-where]#Blumenau, BR (On-site/hybrid)# [.job-dates]#11/2025 – 08/2026#
+
+[.company-description]
+_WK Sistemas provides enterprise ERP and management solutions for businesses._
+
+* Worked on the platform project designed as the foundation for the AI flow across WK’s ERP software.
+* Developed robust APIs and background workers to integrate internal ERP data with third-party and external services.
+* Built core software components and packages that form the company's official SDK, providing the foundation for constructing new applications.
+
+[.tech-stack]
+*Tech Stack:* GoLang, .NET / C#, MS Azure, APIs, AI Workflows.
+
+
+[.job]
+=== [.job-title]#Senior Software Engineer# [.job-company]#Mercado Livre# [.job-where]#Florianópolis, BR (Remote/hybrid)# [.job-dates]#08/2024 – 09/2025#
+
+[.company-description]
+_Mercado Livre is the leading e-commerce and fintech ecosystem in Latin America._
+
+* Developed applications in GoLang and Java for invoice orchestration, optimizing full-fillment logistics across regional platforms in Brazil, Chile, and Peru.
+* Enhanced team development efficiency by building custom mock libraries and specialized routing mechanisms.
+* Strengthened overall platform security by proactively handling and mitigating code vulnerabilities.
+* Contributed to technology updates and internal knowledge sharing, ensuring the team remained aligned with modern industry best practices.
+
+[.tech-stack]
+*Tech Stack:* GoLang, Java, Microservices, System Design, REST APIs..
+
+
+[.job]
+=== [.job-title]#Senior Software Engineer# [.job-company]#Levva# [.job-where]#Campinas, BR (Remote)# [.job-dates]#01/2024 – 08/2024#
+
+[.company-description]
+_Levva is a software development consultancy focused on tailored digital solutions._
+
+* Engineered contingency and data consolidation mechanisms for fintech platform _Jeitto.com.br_, guaranteeing high data integrity and service availability.
+* Optimized financial collection processes, significantly reducing manual intervention and increasing operational performance.
+* Handled integrations across back-office operations, core-banking platforms, and internal services, streamlining data flow between systems.
+
+
+[.tech-stack]
+*Tech Stack:* Python, Fintech / Core-Banking Integrations, Microservices.
+
+
+[.job]
+=== [.job-title]#Senior Software Engineer# [.job-company]#AmbevTech# [.job-where]#Blumenau, BR (On-site/hybrid)# [.job-dates]#08/2019 – 01/2024#
+
+[.company-description]
+_AmbevTech is the technology hub for AB InBev / Ambev, focusing on digital transformation and logistics._
+
+* Developed microservices and APIs using Python and C# to extract, transform, and stream legacy ERP data into modern platform environments.
+* Built custom Command Line Interface (CLI) tools that streamlined internal engineering workflows.
+* Conducted internal C# training sessions for COBOL developers, leading the technical transition of engineers into modern stacks.
+* Collaborated on project management and build/deployment automation within MS Azure.
+
+[.tech-stack]
+*Tech Stack:* Python, C#, MS Azure, Microservices, CLI, Docker, SQL Server, PostgreSQL.
+
+
+[.job]
+=== [.job-title]#Software Developer# [.job-company]#Philips# [.job-where]#Blumenau, BR (On-site)# [.job-dates]#03/2019 – 08/2019#
+
+[.company-description]
+_Philips Healthcare delivers clinical and administrative health management software (Tasy)._
+
+* Performed maintenance and feature development for the Healthcare Operators (ODS) module within the Tasy software suite.
+
+[.tech-stack]
+*Tech Stack:* Oracle PL/SQL, Java, JavaScript, Delphi.
+
+
+[.job]
+=== [.job-title]#Software Developer# [.job-company]#Time Informatica# [.job-where]#Blumenau, BR (On-site)# [.job-dates]#09/2012 – 03/2019#
+
+[.company-description]
+_Time Informática provides commercial enterprise ERP systems and operational desktop tools._
+
+* Developed and maintained commercial ERP systems, satellite tax applications (PAF-ECF), and client operational software.
+* Implemented and managed application servers to ensure operational stability and scalability.
+* Created automated internal tooling, including licensing servers and application telemetry, optimizing technical support and monitoring workflows.
+
+[.tech-stack]
+*Tech Stack:* Visual FoxPro, Lazarus/FPC, PHP, Python, Linux Server Automation, MySQL/MariaDB.
+
+
+== Projects
+
+=== Escoteirando
+
+https://github.com/escoteirando[GitHub]
+
+* Escoteirando Suite is a unified digital platform for the Brazilian Scout Association (UEB) that brings together the everyday tools scout leaders and families need to run their groups — in one coordinated ecosystem. Instead of a pile of disconnected apps, it offers a single, consistent experience where every product speaks the same language and shares the same login, so a scout leader moves seamlessly between managing their troop, planning activities, and tracking progress without relearning a new system each time.
+* For the people on the ground, the suite delivers concrete value: a clear sidebar navigation for troop management, advancement and badge tracking, event planning, and a financial tracker; a metrics dashboard with KPI cards so leaders see the health of their group at a glance; an interactive roster with status badges and quick actions; and guided multi-step wizards for complex tasks like running an event or recording advancement. A unified, premium yet practical visual identity ("tactical-clean outdoor gear meets enterprise SaaS") makes the tools feel coherent and trustworthy across every screen. Because scout activities often happen off the grid, the platform is designed offline-first, and it is built privacy-first from day one to protect the data of minors under LGPD.
+* The bigger picture is coordination and scale: the Suite lets the escoteirando organization roll out new capabilities across 18+ existing scout repositories without fragmenting the experience, while keeping a single, secure sign-on and shared standards so any local group in Brazil can adopt the tools. It is positioned to start with a specific group and scale to any UEB troop nationwide — turning scattered volunteer effort into a standardized, reliable operating backbone for Brazilian scouting.
+* Architecturally, the suite is deliberately polyglot: the guiding decision is to standardize contracts, not languages. Each project is versioned independently via git submodules, and ideas evolve through a traceable Issue → RFD (discussion) → ADR (decision) → Skill pipeline. Shared infrastructure is centralized on Supabase (PostgreSQL + Auth + Storage), while compliance constraints — LGPD data-protection law and the privacy of minors — are treated as day-one requirements, alongside an offline-first stance for field activities without connectivity. An AI-agent-first discipline keeps every project consistent for automated development.
+* The chosen stack is expressed through three opinionated reference profiles: Python 3.13 + FastAPI for data APIs, Go 1.25 + Chi v5 for high-performance proxies and the auth service, and Vue 3.5 + Nuxt 4 + TypeScript for web frontends (TypeScript is mandatory for any Node project). Concretely this has produced a Go/Chi auth-service with a unified multi-provider login contract, a FastAPI Pessoas (people) API with unified-identity merging, and a Nuxt 4 unified frontend — currently gaining a v1.4 design system built on Tailwind CSS v4 design tokens for a cohesive, reusable component library.
+_This is a work-in-progress._
+
+
+== Education
+
+* Postgraduate Degree in Data Science & Big Data Analytics – Faculdade Metropolitana _(2020)_
+* Bachelor’s Degree in Software Engineering – UniCesumar _(2016 – 2020)_
+* Bachelor’s Degree in Physical Therapy – FURB _(1997 – 2001)_
+
+== Certifications
+
+* *Ultimate Go Programming* – O'Reilly
+* *Software Architecture Fundamentals* – https://desenvolvedor.io[Desenvolvedor.io]
+* *Python: Advanced Design Patterns* – LinkedIn Learning
+* *Software Architecture: Patterns for Developers* – LinkedIn Learning
+* *Software Architecture: Breaking a Monolith into Microservices* – LinkedIn Learning
+
+== Volunteering & Community
+
+* *Scout Leader (GE Leões de Blumenau)* _(2018 – Present)_: Team management, leadership development, social skills fostering, and youth activity planning.
+* *Speaker / Instructor*: Delivered C# training for legacy teams (AmbevTech, 2023), Python courses (Uniasselvi, 2022), and Python Sul conference speaker on "Data Extraction from Monoliths to Microservices" (2022).

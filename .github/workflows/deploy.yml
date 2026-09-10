@@ -1,0 +1,60 @@
+name: Publicar portal
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Restaurar PDFs do currículo
+        id: resume-cache
+        uses: actions/cache@v4
+        with:
+          path: public/resume
+          key: resume-pdf-v1-${{ runner.os }}-${{ hashFiles('resume/**/*.adoc', 'resume/**/*.css', 'resume/icons/**', 'scripts/build-resume.mjs', '.github/workflows/deploy.yml') }}
+      - name: Instalar Asciidoctor
+        if: steps.resume-cache.outputs.cache-hit != 'true'
+        run: sudo gem install asciidoctor -v 2.0.26 --no-document
+      - name: Gerar currículos em português e inglês
+        if: steps.resume-cache.outputs.cache-hit != 'true'
+        run: npm run build:resume
+      - name: Verificar PDFs para publicação
+        run: |
+          test -s public/resume/Guionardo_Furlan_Resume.pt.pdf
+          test -s public/resume/Guionardo_Furlan_Resume.en.pdf
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        with:
+          path: dist
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar
+        id: deployment
+        uses: actions/deploy-pages@v4

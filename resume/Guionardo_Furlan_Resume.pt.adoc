@@ -1,0 +1,132 @@
+= Guionardo Furlan
+:doctype: article
+:encoding: utf-8
+:lang: pt-BR
+:sectnums!:
+:toc!:
+:icons: font
+:stylesheet: resume.css
+:linkcss:
+:source-highlighter: none
+
+[.contact]
+image:icons/linkedin.png[LinkedIn] https://www.linkedin.com/in/guionardo[LinkedIn] | image:icons/phone.png[Telefone] +55 (47) 98805-0705 | image:icons/email.png[E-mail] mailto:guionardo@guionardofurlan.com.br[guionardo@guionardofurlan.com.br] | image:icons/github.png[GitHub] https://github.com/guionardo[GitHub]
+
+== Competências
+
+* GoLang, Python, C#, Cloud & DevOps (MS Azure, GCP), Projeto de Sistemas, Microsserviços, APIs, Docker, Linux
+* MySQL, MariaDB, PostgreSQL, SQL Server, SQLite, Oracle
+* Testes Unitários e de Integração (TDD), Docker, Kubernetes, Bash, JavaScript, PHP, Virtualização, IoT (Raspberry Pi/Arduino), Desenvolvimento assistido por IA
+* Idiomas: Português (nativo), Inglês (nível intermediário)
+
+== Experiência
+
+[.job]
+=== [.job-title]#Engenheiro de Software Sênior# [.job-company]#WK Sistemas# [.job-where]#Blumenau, BR (Presencial/híbrido)# [.job-dates]#11/2025 – 08/2026#
+
+[.company-description]
+_A WK Sistemas fornece soluções empresariais de ERP e gestão._
+
+* Atuei no projeto de plataforma concebido como base para o fluxo de IA nos softwares ERP da WK.
+* Desenvolvi APIs robustas e workers em segundo plano para integrar dados internos do ERP com serviços externos e de terceiros.
+* Construí componentes e pacotes fundamentais do SDK oficial da empresa, fornecendo a base para a criação de novas aplicações.
+
+[.tech-stack]
+*Tecnologias:* GoLang, .NET / C#, MS Azure, APIs, Fluxos de IA.
+
+[.job]
+=== [.job-title]#Engenheiro de Software Sênior# [.job-company]#Mercado Livre# [.job-where]#Florianópolis, BR (Remoto/híbrido)# [.job-dates]#08/2024 – 09/2025#
+
+[.company-description]
+_O Mercado Livre é o principal ecossistema de comércio eletrônico e fintech da América Latina._
+
+* Desenvolvi aplicações em GoLang e Java para orquestração de notas fiscais, otimizando a logística de fulfillment nas plataformas regionais do Brasil, Chile e Peru.
+* Melhorei a eficiência de desenvolvimento da equipe construindo bibliotecas de mocks e mecanismos especializados de roteamento.
+* Fortaleci a segurança da plataforma por meio do tratamento e da mitigação proativa de vulnerabilidades de código.
+* Contribuí para atualizações tecnológicas e compartilhamento interno de conhecimento, mantendo a equipe alinhada às boas práticas modernas do setor.
+
+[.tech-stack]
+*Tecnologias:* GoLang, Java, Microsserviços, Projeto de Sistemas, APIs REST.
+
+[.job]
+=== [.job-title]#Engenheiro de Software Sênior# [.job-company]#Levva# [.job-where]#Campinas, BR (Remoto)# [.job-dates]#01/2024 – 08/2024#
+
+[.company-description]
+_A Levva é uma consultoria de desenvolvimento de software focada em soluções digitais sob medida._
+
+* Desenvolvi mecanismos de contingência e consolidação de dados para a plataforma fintech _Jeitto.com.br_, garantindo alta integridade de dados e disponibilidade dos serviços.
+* Otimizei processos de cobrança financeira, reduzindo significativamente a intervenção manual e aumentando o desempenho operacional.
+* Trabalhei em integrações entre operações de back-office, plataformas de core banking e serviços internos, simplificando o fluxo de dados entre sistemas.
+
+[.tech-stack]
+*Tecnologias:* Python, Integrações Fintech / Core Banking, Microsserviços.
+
+[.job]
+=== [.job-title]#Engenheiro de Software Sênior# [.job-company]#AmbevTech# [.job-where]#Blumenau, BR (Presencial/híbrido)# [.job-dates]#08/2019 – 01/2024#
+
+[.company-description]
+_A AmbevTech é o polo de tecnologia da AB InBev / Ambev, com foco em transformação digital e logística._
+
+* Desenvolvi microsserviços e APIs em Python e C# para extrair, transformar e transmitir dados de ERPs legados para ambientes de plataformas modernas.
+* Construí ferramentas de linha de comando (CLI) que simplificaram os fluxos internos de engenharia.
+* Ministrei treinamentos internos de C# para desenvolvedores COBOL, conduzindo a transição técnica de engenheiros para tecnologias modernas.
+* Colaborei com gestão de projetos e automação de build e implantação no MS Azure.
+
+[.tech-stack]
+*Tecnologias:* Python, C#, MS Azure, Microsserviços, CLI, Docker, SQL Server, PostgreSQL.
+
+[.job]
+=== [.job-title]#Desenvolvedor de Software# [.job-company]#Philips# [.job-where]#Blumenau, BR (Presencial)# [.job-dates]#03/2019 – 08/2019#
+
+[.company-description]
+_A Philips Healthcare fornece software de gestão clínica e administrativa em saúde (Tasy)._
+
+* Realizei manutenção e desenvolvimento de funcionalidades do módulo de Operadoras de Saúde (ODS) do software Tasy.
+
+[.tech-stack]
+*Tecnologias:* Oracle PL/SQL, Java, JavaScript, Delphi.
+
+[.job]
+=== [.job-title]#Desenvolvedor de Software# [.job-company]#Time Informatica# [.job-where]#Blumenau, BR (Presencial)# [.job-dates]#09/2012 – 03/2019#
+
+[.company-description]
+_A Time Informática fornece sistemas ERP comerciais e ferramentas operacionais desktop._
+
+* Desenvolvi e mantive sistemas ERP comerciais, aplicações fiscais complementares (PAF-ECF) e softwares operacionais para clientes.
+* Implementei e gerenciei servidores de aplicação para garantir estabilidade operacional e escalabilidade.
+* Criei ferramentas internas automatizadas, incluindo servidores de licenciamento e telemetria de aplicações, otimizando os fluxos de suporte técnico e monitoramento.
+
+[.tech-stack]
+*Tecnologias:* Visual FoxPro, Lazarus/FPC, PHP, Python, Automação de Servidores Linux, MySQL/MariaDB.
+
+== Projetos
+
+=== Escoteirando
+
+https://github.com/escoteirando[GitHub]
+
+* A Escoteirando Suite é uma plataforma digital unificada para os Escoteiros do Brasil (UEB) que reúne as ferramentas cotidianas necessárias para que escotistas e famílias conduzam seus grupos em um ecossistema coordenado. Em vez de aplicativos desconectados, oferece uma experiência consistente, na qual todos os produtos compartilham a mesma linguagem e o mesmo login. Assim, um escotista pode alternar entre a gestão da seção, o planejamento de atividades e o acompanhamento da progressão sem reaprender um sistema a cada etapa.
+* Para quem atua no dia a dia, a suite oferece navegação lateral para gestão de seções, acompanhamento de progressão e distintivos, planejamento de eventos e controle financeiro; um painel de indicadores com cartões de KPI para acompanhar a situação do grupo; uma lista interativa de integrantes com indicadores de status e ações rápidas; e assistentes guiados para tarefas complexas, como organizar eventos ou registrar progressão. Uma identidade visual unificada, sofisticada e prática, que combina equipamentos de atividades ao ar livre com SaaS empresarial, mantém a coerência entre as telas. Como as atividades escoteiras frequentemente ocorrem sem conexão, a plataforma foi concebida como offline-first e com privacidade desde o início, para proteger os dados de menores conforme a LGPD.
+* A visão mais ampla é de coordenação e escala: a suite permite à organização escoteirando distribuir novas funcionalidades por mais de 18 repositórios escoteiros existentes sem fragmentar a experiência, mantendo autenticação única segura e padrões compartilhados para adoção por grupos locais em todo o Brasil. A proposta é começar com um grupo específico e expandir para qualquer seção da UEB no país, transformando esforços voluntários dispersos em uma base operacional padronizada e confiável para o escotismo brasileiro.
+* Arquiteturalmente, a suite é deliberadamente poliglota: a decisão orientadora é padronizar contratos, não linguagens. Cada projeto é versionado de forma independente por submódulos Git, e as ideias evoluem por um fluxo rastreável de Issue → RFD (discussão) → ADR (decisão) → Skill. A infraestrutura compartilhada é centralizada no Supabase (PostgreSQL + Auth + Storage), enquanto a LGPD e a privacidade de menores são tratadas como requisitos desde o início, junto à abordagem offline-first para atividades de campo sem conectividade. Uma disciplina orientada a agentes de IA mantém a consistência entre os projetos para desenvolvimento automatizado.
+* A stack escolhida se organiza em três perfis de referência: Python 3.13 + FastAPI para APIs de dados, Go 1.25 + Chi v5 para proxies de alto desempenho e o serviço de autenticação, e Vue 3.5 + Nuxt 4 + TypeScript para interfaces web (TypeScript é obrigatório em qualquer projeto Node). Isso já resultou em um serviço de autenticação Go/Chi com contrato unificado de login com múltiplos provedores, uma API Pessoas em FastAPI com unificação de identidades e um frontend unificado em Nuxt 4, que está recebendo um sistema de design v1.4 baseado em tokens do Tailwind CSS v4 para uma biblioteca de componentes coesa e reutilizável.
+_Este projeto está em desenvolvimento._
+
+== Formação
+
+* Pós-graduação em Data Science & Big Data Analytics – Faculdade Metropolitana _(2020)_
+* Bacharelado em Engenharia de Software – UniCesumar _(2016 – 2020)_
+* Bacharelado em Fisioterapia – FURB _(1997 – 2001)_
+
+== Certificações
+
+* *Ultimate Go Programming* – O'Reilly
+* *Fundamentos de Arquitetura de Software* – https://desenvolvedor.io[Desenvolvedor.io]
+* *Python: Advanced Design Patterns* – LinkedIn Learning
+* *Software Architecture: Patterns for Developers* – LinkedIn Learning
+* *Software Architecture: Breaking a Monolith into Microservices* – LinkedIn Learning
+
+== Voluntariado e comunidade
+
+* *Escotista (GE Leões de Blumenau)* _(2018 – Atual)_: Gestão de equipes, desenvolvimento de liderança, estímulo a habilidades sociais e planejamento de atividades para jovens.
+* *Palestrante / Instrutor*: Ministrei treinamentos de C# para equipes de sistemas legados (AmbevTech, 2023), cursos de Python (Uniasselvi, 2022) e palestra na Python Sul sobre "Extração de Dados de Monólitos para Microsserviços" (2022).
