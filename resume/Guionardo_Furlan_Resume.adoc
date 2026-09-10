@@ -15,7 +15,8 @@ image:icons/linkedin.png[LinkedIn] https://www.linkedin.com/in/guionardo[LinkedI
 
 == Skills
 
-* GoLang, Python, C#, Cloud & DevOps (MS Azure, GCP), System Design, Microservices, APIs, Docker, Linux
+* GoLang, Python (Django, FastAPI, scripting), C#
+* Cloud & DevOps (MS Azure, GCP), System Design, Microservices, APIs, Docker, Linux
 * MySQL, MariaDB, PostgreSQL, SQL Server, SQLite, Oracle
 * Unit Testing & Integration Testing (TDD), Docker, Kubernetes, Bash, JavaScript, PHP, Virtualization, IoT (Raspberry Pi/Arduino), AI-assisted development
 * Languages: Portuguese (native), English (intermediate level)
@@ -34,7 +35,7 @@ _WK Sistemas provides enterprise ERP and management solutions for businesses._
 * Built core software components and packages that form the company's official SDK, providing the foundation for constructing new applications.
 
 [.tech-stack]
-*Tech Stack:* GoLang, .NET / C#, MS Azure, APIs, AI Workflows.
+*Tech Stack:* GoLang, .NET / C#, MS Azure, APIs, AI agents (Cursor/Claude).
 
 
 [.job]
@@ -43,7 +44,7 @@ _WK Sistemas provides enterprise ERP and management solutions for businesses._
 [.company-description]
 _Mercado Livre is the leading e-commerce and fintech ecosystem in Latin America._
 
-* Developed applications in GoLang and Java for invoice orchestration, optimizing full-fillment logistics across regional platforms in Brazil, Chile, and Peru.
+* On the FBM-Fiscal team, developed applications in GoLang and Java for invoice orchestration, optimizing full-fillment logistics across regional platforms in Brazil, Chile, and Peru.
 * Enhanced team development efficiency by building custom mock libraries and specialized routing mechanisms.
 * Strengthened overall platform security by proactively handling and mitigating code vulnerabilities.
 * Contributed to technology updates and internal knowledge sharing, ensuring the team remained aligned with modern industry best practices.
@@ -64,7 +65,7 @@ _Levva is a software development consultancy focused on tailored digital solutio
 
 
 [.tech-stack]
-*Tech Stack:* Python, Fintech / Core-Banking Integrations, Microservices.
+*Tech Stack:* Python (Flask, scripting, Apache Airflow), Fintech / Core-Banking Integrations, Microservices.
 
 
 [.job]
@@ -73,13 +74,13 @@ _Levva is a software development consultancy focused on tailored digital solutio
 [.company-description]
 _AmbevTech is the technology hub for AB InBev / Ambev, focusing on digital transformation and logistics._
 
-* Developed microservices and APIs using Python and C# to extract, transform, and stream legacy ERP data into modern platform environments.
+* Developed microservices and APIs using Python and C# to extract, transform, and stream legacy ERP data into modern platform environments. These case became a reference for the company's transition from monolithic systems to microservices architecture and was presented at Python conferences.
 * Built custom Command Line Interface (CLI) tools that streamlined internal engineering workflows.
 * Conducted internal C# training sessions for COBOL developers, leading the technical transition of engineers into modern stacks.
 * Collaborated on project management and build/deployment automation within MS Azure.
 
 [.tech-stack]
-*Tech Stack:* Python, C#, MS Azure, Microservices, CLI, Docker, SQL Server, PostgreSQL.
+*Tech Stack:* Python (Flask, FastAPI, pure Python), C# (core), MS Azure, Microservices, CLI, Docker, SQL Server, PostgreSQL.
 
 
 [.job]
@@ -88,7 +89,8 @@ _AmbevTech is the technology hub for AB InBev / Ambev, focusing on digital trans
 [.company-description]
 _Philips Healthcare delivers clinical and administrative health management software (Tasy)._
 
-* Performed maintenance and feature development for the Healthcare Operators (ODS) module within the Tasy software suite.
+* Performed maintenance and feature development for the Healthcare Operators (ODS) module within the Tasy software suite. 
+* This work involved addressing client requests, implementing new functionalities, and fixing bugs to ensure the system's continuity and improvement.
 
 [.tech-stack]
 *Tech Stack:* Oracle PL/SQL, Java, JavaScript, Delphi.
@@ -119,6 +121,7 @@ https://github.com/escoteirando[GitHub]
 * The bigger picture is coordination and scale: the Suite lets the escoteirando organization roll out new capabilities across 18+ existing scout repositories without fragmenting the experience, while keeping a single, secure sign-on and shared standards so any local group in Brazil can adopt the tools. It is positioned to start with a specific group and scale to any UEB troop nationwide — turning scattered volunteer effort into a standardized, reliable operating backbone for Brazilian scouting.
 * Architecturally, the suite is deliberately polyglot: the guiding decision is to standardize contracts, not languages. Each project is versioned independently via git submodules, and ideas evolve through a traceable Issue → RFD (discussion) → ADR (decision) → Skill pipeline. Shared infrastructure is centralized on Supabase (PostgreSQL + Auth + Storage), while compliance constraints — LGPD data-protection law and the privacy of minors — are treated as day-one requirements, alongside an offline-first stance for field activities without connectivity. An AI-agent-first discipline keeps every project consistent for automated development.
 * The chosen stack is expressed through three opinionated reference profiles: Python 3.13 + FastAPI for data APIs, Go 1.25 + Chi v5 for high-performance proxies and the auth service, and Vue 3.5 + Nuxt 4 + TypeScript for web frontends (TypeScript is mandatory for any Node project). Concretely this has produced a Go/Chi auth-service with a unified multi-provider login contract, a FastAPI Pessoas (people) API with unified-identity merging, and a Nuxt 4 unified frontend — currently gaining a v1.4 design system built on Tailwind CSS v4 design tokens for a cohesive, reusable component library.
+
 _This is a work-in-progress._
 
 
@@ -130,7 +133,7 @@ _This is a work-in-progress._
 
 == Certifications
 
-* *Ultimate Go Programming* – O'Reilly
+* *Ultimate Go Programming* – O'Reilly (Bill Kennedy)
 * *Software Architecture Fundamentals* – https://desenvolvedor.io[Desenvolvedor.io]
 * *Python: Advanced Design Patterns* – LinkedIn Learning
 * *Software Architecture: Patterns for Developers* – LinkedIn Learning

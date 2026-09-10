@@ -14,7 +14,8 @@ image:icons/linkedin.png[LinkedIn] https://www.linkedin.com/in/guionardo[LinkedI
 
 == Competências
 
-* GoLang, Python, C#, Cloud & DevOps (MS Azure, GCP), Projeto de Sistemas, Microsserviços, APIs, Docker, Linux
+* GoLang, Python (Django, FastAPI, scripting), C#
+* Cloud & DevOps (MS Azure, GCP), Projeto de Sistemas, Microsserviços, APIs, Docker, Linux
 * MySQL, MariaDB, PostgreSQL, SQL Server, SQLite, Oracle
 * Testes Unitários e de Integração (TDD), Docker, Kubernetes, Bash, JavaScript, PHP, Virtualização, IoT (Raspberry Pi/Arduino), Desenvolvimento assistido por IA
 * Idiomas: Português (nativo), Inglês (nível intermediário)
@@ -32,7 +33,7 @@ _A WK Sistemas fornece soluções empresariais de ERP e gestão._
 * Construí componentes e pacotes fundamentais do SDK oficial da empresa, fornecendo a base para a criação de novas aplicações.
 
 [.tech-stack]
-*Tecnologias:* GoLang, .NET / C#, MS Azure, APIs, Fluxos de IA.
+*Tecnologias:* GoLang, .NET / C#, MS Azure, Agentes de IA (Cursor/Claude).
 
 [.job]
 === [.job-title]#Engenheiro de Software Sênior# [.job-company]#Mercado Livre# [.job-where]#Florianópolis, BR (Remoto/híbrido)# [.job-dates]#08/2024 – 09/2025#
@@ -40,7 +41,7 @@ _A WK Sistemas fornece soluções empresariais de ERP e gestão._
 [.company-description]
 _O Mercado Livre é o principal ecossistema de comércio eletrônico e fintech da América Latina._
 
-* Desenvolvi aplicações em GoLang e Java para orquestração de notas fiscais, otimizando a logística de fulfillment nas plataformas regionais do Brasil, Chile e Peru.
+* Atuando no time FBM-Fiscal, desenvolvi aplicações em GoLang e Java para orquestração de notas fiscais, otimizando a logística de fulfillment nas plataformas regionais do Brasil, Chile e Peru.
 * Melhorei a eficiência de desenvolvimento da equipe construindo bibliotecas de mocks e mecanismos especializados de roteamento.
 * Fortaleci a segurança da plataforma por meio do tratamento e da mitigação proativa de vulnerabilidades de código.
 * Contribuí para atualizações tecnológicas e compartilhamento interno de conhecimento, mantendo a equipe alinhada às boas práticas modernas do setor.
@@ -59,7 +60,7 @@ _A Levva é uma consultoria de desenvolvimento de software focada em soluções 
 * Trabalhei em integrações entre operações de back-office, plataformas de core banking e serviços internos, simplificando o fluxo de dados entre sistemas.
 
 [.tech-stack]
-*Tecnologias:* Python, Integrações Fintech / Core Banking, Microsserviços.
+*Tecnologias:* Python (Flask, scripting, Apache Airflow), Integrações Fintech / Core Banking, Microsserviços.
 
 [.job]
 === [.job-title]#Engenheiro de Software Sênior# [.job-company]#AmbevTech# [.job-where]#Blumenau, BR (Presencial/híbrido)# [.job-dates]#08/2019 – 01/2024#
@@ -67,13 +68,13 @@ _A Levva é uma consultoria de desenvolvimento de software focada em soluções 
 [.company-description]
 _A AmbevTech é o polo de tecnologia da AB InBev / Ambev, com foco em transformação digital e logística._
 
-* Desenvolvi microsserviços e APIs em Python e C# para extrair, transformar e transmitir dados de ERPs legados para ambientes de plataformas modernas.
+* Desenvolvi microsserviços e APIs em Python e C# para extrair, transformar e transmitir dados de ERPs legados para ambientes de plataformas modernas. Esses casos se tornaram uma referência para a transição da empresa de sistemas monolíticos para arquitetura de microsserviços e foram apresentados em conferências de Python.
 * Construí ferramentas de linha de comando (CLI) que simplificaram os fluxos internos de engenharia.
 * Ministrei treinamentos internos de C# para desenvolvedores COBOL, conduzindo a transição técnica de engenheiros para tecnologias modernas.
 * Colaborei com gestão de projetos e automação de build e implantação no MS Azure.
 
 [.tech-stack]
-*Tecnologias:* Python, C#, MS Azure, Microsserviços, CLI, Docker, SQL Server, PostgreSQL.
+*Tecnologias:* Python (Flask, FastAPI, Python puro), C# (core), MS Azure, Microsserviços, CLI, Docker, SQL Server, PostgreSQL.
 
 [.job]
 === [.job-title]#Desenvolvedor de Software# [.job-company]#Philips# [.job-where]#Blumenau, BR (Presencial)# [.job-dates]#03/2019 – 08/2019#
@@ -82,6 +83,7 @@ _A AmbevTech é o polo de tecnologia da AB InBev / Ambev, com foco em transforma
 _A Philips Healthcare fornece software de gestão clínica e administrativa em saúde (Tasy)._
 
 * Realizei manutenção e desenvolvimento de funcionalidades do módulo de Operadoras de Saúde (ODS) do software Tasy.
+* Este trabalho envolveu o atendimento de demandas de clientes, a implementação de novas funcionalidades e a correção de bugs, garantindo a continuidade e a melhoria do sistema.
 
 [.tech-stack]
 *Tecnologias:* Oracle PL/SQL, Java, JavaScript, Delphi.
@@ -110,6 +112,7 @@ https://github.com/escoteirando[GitHub]
 * A visão mais ampla é de coordenação e escala: a suite permite à organização escoteirando distribuir novas funcionalidades por mais de 18 repositórios escoteiros existentes sem fragmentar a experiência, mantendo autenticação única segura e padrões compartilhados para adoção por grupos locais em todo o Brasil. A proposta é começar com um grupo específico e expandir para qualquer seção da UEB no país, transformando esforços voluntários dispersos em uma base operacional padronizada e confiável para o escotismo brasileiro.
 * Arquiteturalmente, a suite é deliberadamente poliglota: a decisão orientadora é padronizar contratos, não linguagens. Cada projeto é versionado de forma independente por submódulos Git, e as ideias evoluem por um fluxo rastreável de Issue → RFD (discussão) → ADR (decisão) → Skill. A infraestrutura compartilhada é centralizada no Supabase (PostgreSQL + Auth + Storage), enquanto a LGPD e a privacidade de menores são tratadas como requisitos desde o início, junto à abordagem offline-first para atividades de campo sem conectividade. Uma disciplina orientada a agentes de IA mantém a consistência entre os projetos para desenvolvimento automatizado.
 * A stack escolhida se organiza em três perfis de referência: Python 3.13 + FastAPI para APIs de dados, Go 1.25 + Chi v5 para proxies de alto desempenho e o serviço de autenticação, e Vue 3.5 + Nuxt 4 + TypeScript para interfaces web (TypeScript é obrigatório em qualquer projeto Node). Isso já resultou em um serviço de autenticação Go/Chi com contrato unificado de login com múltiplos provedores, uma API Pessoas em FastAPI com unificação de identidades e um frontend unificado em Nuxt 4, que está recebendo um sistema de design v1.4 baseado em tokens do Tailwind CSS v4 para uma biblioteca de componentes coesa e reutilizável.
+
 _Este projeto está em desenvolvimento._
 
 == Formação
@@ -120,7 +123,7 @@ _Este projeto está em desenvolvimento._
 
 == Certificações
 
-* *Ultimate Go Programming* – O'Reilly
+* *Ultimate Go Programming* – O'Reilly (Bill Kennedy)
 * *Fundamentos de Arquitetura de Software* – https://desenvolvedor.io[Desenvolvedor.io]
 * *Python: Advanced Design Patterns* – LinkedIn Learning
 * *Software Architecture: Patterns for Developers* – LinkedIn Learning
