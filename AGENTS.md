@@ -4,19 +4,19 @@ Estas instruções se aplicam a todo o repositório, especialmente à criação 
 edição de artigos, páginas, projetos, ferramentas e currículo. Leia também o
 README.md e os arquivos envolvidos antes de editar.
 
-## Regra editorial obrigatória: português e inglês
+## Regra editorial obrigatória: português, inglês e espanhol
 
 - Todo conteúdo destinado aos visitantes deve existir em **português brasileiro
-  (pt-BR)** e **inglês (en)**. Isso inclui artigos, títulos, resumos, tags,
+  (pt-BR)**, **inglês (en)** e **espanhol (es)**. Isso inclui artigos, títulos, resumos, tags,
   legendas, textos alternativos de imagens, links com texto, metadados e páginas.
-- Crie ou atualize as duas versões na mesma entrega. Uma correção factual,
-  mudança de link ou atualização de conteúdo deve ser refletida em ambas.
+- Crie ou atualize as três versões na mesma entrega. Uma correção factual,
+  mudança de link ou atualização de conteúdo deve ser refletida em todas.
 - Traduza o significado com linguagem natural, preservando fatos, exemplos,
   ressalvas e intenção. Não acrescente afirmações em apenas uma das versões.
 - Preserve nomes próprios, marcas, comandos, identificadores de código e URLs
   externas. Localize links internos para a página equivalente quando existir.
 - Documentação interna, como este arquivo e o README, pode ficar em português.
-- Se faltarem informações, mantenha o par em rascunho e relate a pendência.
+- Se faltarem informações, mantenha as três versões em rascunho e relate a pendência.
   Não publique apenas um idioma para contornar uma tradução incompleta.
 
 ## Voz e precisão
@@ -40,7 +40,7 @@ README.md e os arquivos envolvidos antes de editar.
 O formato implementado é Markdown em `src/content/blog/`. AsciiDoc ainda não
 tem suporte: não crie arquivos `.adoc` esperando que sejam publicados.
 
-Para novos artigos, use um par como `tema.pt.md` e `tema.en.md`. O nome do
+Para novos artigos, use um conjunto como `tema.pt.md`, `tema.en.md` e `tema.es.md`. O nome do
 arquivo não define a URL. Consulte `src/content.config.ts` para o schema real.
 
 Exemplo de metadados para a versão portuguesa:
@@ -74,11 +74,11 @@ translationKey: identificador-estavel-do-artigo
 ```
 
 - Substitua os valores de exemplo. Use a data real acordada para publicação,
-  no formato `YYYY-MM-DD`, igual nas duas versões. Não altere a data original
+  no formato `YYYY-MM-DD`, igual nas três versões. Não altere a data original
   de um artigo só porque ele foi revisado ou traduzido.
 - Declare `lang` e `translationKey` explicitamente em todos os novos artigos,
-  mesmo que o schema os aceite como opcionais. O valor do frontmatter é `pt`,
-  enquanto o idioma do HTML é `pt-BR`.
+  mesmo que o schema os aceite como opcionais. O valor do frontmatter é `pt`, `en` ou `es`; para português,
+  o idioma do HTML é `pt-BR`.
 - Compartilhe uma `translationKey` estável entre exatamente um arquivo de cada
   idioma. Ela não deve ser traduzida nem reutilizada para outro artigo.
 - Slugs usam letras minúsculas ASCII, números e hífens; são únicos por idioma.
@@ -92,19 +92,24 @@ translationKey: identificador-estavel-do-artigo
 
 ## Rascunhos e publicação
 
-- Novos artigos começam com `draft: true` nos dois idiomas. Um pedido para
+- Novos artigos começam com `draft: true` nos três idiomas. Um pedido para
   escrever ou revisar conteúdo, sozinho, não é um pedido para publicá-lo.
-- Quando o usuário solicitar publicação, conclua a revisão de ambas as versões
-  e altere `draft: false` no par na mesma entrega. Uma autorização já dada deve
+- Quando o usuário solicitar publicação, conclua a revisão de todas as versões
+  e altere `draft: false` nas três versões na mesma entrega. Uma autorização já dada deve
   ser respeitada sem pedir confirmação novamente.
 - Ao editar artigos publicados, preserve o estado de publicação e atualize
-  ambas as versões. Não transforme artigos existentes em rascunho sem motivo.
+  todas as versões. Não transforme artigos existentes em rascunho sem motivo.
 - Não invente corpo ou tradução para preencher uma lacuna factual.
-- A aplicação atualmente permite conteúdo sem par e `draft` independente.
+- A aplicação atualmente permite conteúdo sem todas as traduções e `draft` independente.
   **A exigência bilíngue deste arquivo é editorial; o build ainda não a garante.**
-  Verifique manualmente o par, inclusive arquivos em rascunho.
-- Alterações na `main` acionam publicação via GitHub Actions. Não faça push,
-  merge ou deploy sem que isso faça parte do pedido autorizado.
+  Verifique manualmente as três versões, inclusive arquivos em rascunho.
+- Cada push aciona o build e a publicação pelo Cloudflare, conforme as branches
+  configuradas no painel. Não faça push, merge ou deploy sem que isso faça
+  parte do pedido autorizado.
+- Não utilizamos GitHub Actions ou GitHub Pages. Não crie workflows de build
+  ou publicação no GitHub; mantenha o processo integrado ao Cloudflare.
+- Use `npm run build` para validar localmente antes de um push autorizado.
+  Os currículos são PDFs estáticos versionados; sua geração continua manual.
 
 ## Páginas e navegação
 
@@ -122,8 +127,8 @@ Atualize sempre os arquivos correspondentes:
 
 - Navegação, seletor de idioma e metadados compartilhados estão em
   `src/layouts/Base.astro`. Novas páginas precisam de correspondência no mapa
-  de idiomas desse layout. A página 404 compartilhada deve atender ambos.
-- Português usa `/`; inglês usa `/en/`. Não altere essa convenção casualmente.
+  de idiomas em `src/lib/i18n.ts`. A página 404 compartilhada deve atender os três idiomas.
+- Português usa `/`; inglês usa `/en/`; espanhol usa `/es/`. Não altere essa convenção casualmente.
 - RSS é separado por idioma. O seletor de artigos depende da `translationKey`;
   sem tradução publicada, ele aponta para o blog do outro idioma.
 - Centralize o acesso aos artigos em `src/lib/content.ts` e preserve canonical,
@@ -132,14 +137,14 @@ Atualize sempre os arquivos correspondentes:
 
 ## Verificação antes da entrega
 
-1. Confira se ambas as versões existem, estão completas e têm o mesmo sentido.
-2. Revise fatos, fontes, links, imagens, metadados, slugs e a chave do par.
+1. Confira se todas as versões existem, estão completas e têm o mesmo sentido.
+2. Revise fatos, fontes, links, imagens, metadados, slugs e a chave das traduções.
 3. Confira o estado de publicação e a ausência de placeholders em conteúdo
    destinado à publicação.
 4. Execute `npm run build` após mudanças de conteúdo ou código. Verifique as
    rotas afetadas, os links entre idiomas e o RSS quando houver publicação.
    Rascunhos devem continuar ausentes das páginas públicas, RSS e sitemap.
-5. Na entrega, informe os arquivos dos dois idiomas, o que foi validado e
+5. Na entrega, informe os arquivos dos três idiomas, o que foi validado e
    qualquer pendência. Não afirme que houve publicação só porque o build passou.
 
 Alterações apenas em documentação interna não exigem executar o build.
@@ -150,9 +155,28 @@ Alterações apenas em documentação interna não exigem executar o build.
 - Português: `resume/Guionardo_Furlan_Resume.pt.adoc`.
 - Atualize sempre o par, preservando cargos, datas, qualificações e contatos.
   Os demais arquivos históricos em `resume/` não são fontes de publicação.
-- Execute `npm run build:resume` antes de `npm run build` quando o currículo
-  mudar. Requer Asciidoctor e Chrome; `CHROME_BIN` permite selecionar o binário.
-- PDFs gerados ficam em `public/resume/`, ignorados pelo Git. Não edite os PDFs.
-- O Actions gera os dois arquivos quando o cache dos fontes e recursos muda;
-  alterações em qualquer AsciiDoc, CSS, ícone ou script invalidam esse cache.
-- Confira visualmente os PDFs nos dois idiomas antes de entregar mudanças.
+- A geração de PDFs é exclusivamente manual, com `npm run build:resume`.
+  Não adicione geração automática ao build do site, hooks npm ou pipelines.
+- Asciidoctor e Chrome são necessários apenas na máquina que gera os PDFs;
+  `CHROME_BIN` permite selecionar o binário.
+- Os PDFs em `public/resume/` são versionados e publicados como arquivos estáticos.
+  Ao atualizar um currículo, gere e revise os PDFs manualmente e inclua-os
+  junto dos fontes na entrega. Não regenere PDFs em tarefas sem esse escopo.
+- Alterar AsciiDoc, CSS ou ícones não dispara geração automática.
+- Confira visualmente os PDFs nos dois idiomas disponíveis antes de entregar
+  uma atualização dos currículos.
+
+
+### Espanhol e builds
+
+- A política de conteúdo público abrange PT, EN e ES. Artigos usam uma única
+  translationKey compartilhada pelos três idiomas; novos textos devem incluir
+  `lang: es` e revisão da tradução espanhola.
+- As páginas espanholas ficam em `src/pages/es/`. Mantenha as correspondências
+  de navegação em `src/lib/i18n.ts` e os textos comuns em `Base.astro`.
+- Exceção atual: os currículos PDF continuam em PT e EN. A página espanhola
+  identifica explicitamente seu download como inglês; não apresenta uma
+  tradução inexistente. Mantenha as duas fontes AsciiDoc sincronizadas.
+- `npm run build` (ou `npm run run`) compila apenas o site e copia os PDFs
+  versionados para `dist/resume/`. `build:site` executa o Astro diretamente.
+  O build e os pipelines não dependem de Asciidoctor ou Chrome.

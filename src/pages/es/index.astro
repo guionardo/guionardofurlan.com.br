@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getPosts, formatDate } from '../../lib/content';
+const posts = (await getPosts('es')).slice(0, 3);
+---
+<Base title="Inicio">
+  <section class="hero">
+    <p class="eyebrow">GUIONARDO FURLAN / ESPACIO PERSONAL</p>
+    <h1>Ideas, código<br />y lo que viene <em>después.</em></h1>
+    <div class="hero-bottom"><p>Un lugar para compartir lo que aprendo, presentar lo que desarrollo y conectar los próximos proyectos.</p><a class="button" href="/es/sobre/">Conoce mi trayectoria <span>↗</span></a></div>
+  </section>
+  <section class="section"><div class="section-heading"><h2>Explora el sitio</h2><span class="eyebrow">01 — CONEXIONES</span></div>
+    <div class="grid">
+      <a class="card" href="/es/blog/"><span class="number">01 / BLOG</span><h3>Ideas por escrito.</h3><p>Artículos, aprendizajes y reflexiones sobre desarrollo.</p><span class="card-link">Leer artículos ↗</span></a>
+      <a class="card" href="/es/proyectos/"><span class="number">02 / PROYECTOS</span><h3>Del problema a la solución.</h3><p>Proyectos y trabajos: contexto, decisiones y resultados.</p><span class="card-link">Explorar proyectos ↗</span></a>
+      <a class="card dark" href="/es/herramientas/"><span class="number">03 / HERRAMIENTAS</span><h3>Código en acción.</h3><p>El punto de entrada a las herramientas y los productos que desarrollo.</p><span class="card-link">Conocer herramientas ↗</span></a>
+    </div>
+  </section>
+  <section class="section"><div class="section-heading"><h2>Últimas publicaciones</h2><a href="/es/blog/">Todos los artículos ↗</a></div>
+    {posts.length ? posts.map(post => <a class="post-row" href={`/es/blog/${post.data.slug}/`}><div><p class="eyebrow">{formatDate(post.data.date, 'es')}</p><h3>{post.data.title}</h3><p>{post.data.description}</p></div><span aria-hidden="true">↗</span></a>) : <div class="empty"><h3>Los primeros artículos están en camino.</h3><p>Aquí aparecerán nuevas publicaciones y aprendizajes.</p></div>}
+  </section>
+</Base>

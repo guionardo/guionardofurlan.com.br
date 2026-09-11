@@ -1,43 +1,46 @@
 ---
 import '../styles/global.css';
-interface Props { title: string; description?: string; alternate?: string | null }
-const en = Astro.url.pathname.startsWith('/en/');
-const paths: Record<string, string> = { '/': '/en/', '/blog/': '/en/blog/', '/projetos/': '/en/projects/', '/sobre/': '/en/about/', '/ferramentas/': '/en/tools/' };
-const mapped = en ? Object.keys(paths).find(key => paths[key] === Astro.url.pathname) : paths[Astro.url.pathname];
-const alternate = Astro.props.alternate === undefined ? mapped : Astro.props.alternate;
-const switchHref = alternate || (en ? '/blog/' : '/en/blog/');
-const home = en ? '/en/' : '/';
-const feed = en ? '/en/rss.xml' : '/rss.xml';
-const { title, description = en ? 'Articles, projects and background of Guionardo Furlan. Ideas, tools and products.' : 'Artigos, projetos e trajetória de Guionardo Furlan. Um espaço para compartilhar ideias e apresentar ferramentas e produtos.' } = Astro.props;
-const links = en ? [['/en/', 'Home'], ['/en/blog/', 'Blog'], ['/en/projects/', 'Projects'], ['/en/about/', 'About & résumé'], ['/en/tools/', 'Tools']] : [['/', 'Início'], ['/blog/', 'Blog'], ['/projetos/', 'Projetos'], ['/sobre/', 'Sobre & currículo'], ['/ferramentas/', 'Ferramentas']];
+import { languages, locale, prefix, routeGroups, languageFromPath, type Language } from '../lib/i18n';
+interface Props { title: string; description?: string; translations?: Partial<Record<Language, string>> }
+const lang = languageFromPath(Astro.url.pathname);
+const copy = {
+  pt: { description: 'Artigos, projetos e trajetória de Guionardo Furlan. Ideias, ferramentas e produtos.', nav: ['Início', 'Blog', 'Sobre & currículo', 'Projetos', 'Ferramentas'], skip: 'Pular para o conteúdo', navigation: 'Navegação principal', language: 'Idioma', blog: 'Blog de Guionardo Furlan', og: 'pt_BR' },
+  en: { description: 'Articles, projects and background of Guionardo Furlan. Ideas, tools and products.', nav: ['Home', 'Blog', 'About & résumé', 'Projects', 'Tools'], skip: 'Skip to content', navigation: 'Main navigation', language: 'Language', blog: 'Guionardo Furlan’s blog', og: 'en_US' },
+  es: { description: 'Artículos, proyectos y trayectoria de Guionardo Furlan. Ideas, herramientas y productos.', nav: ['Inicio', 'Blog', 'Sobre mí & currículo', 'Proyectos', 'Herramientas'], skip: 'Saltar al contenido', navigation: 'Navegación principal', language: 'Idioma', blog: 'Blog de Guionardo Furlan', og: 'es_ES' },
+}[lang];
+const translations = Astro.props.translations ?? routeGroups.find(group => group[lang] === Astro.url.pathname) ?? { [lang]: Astro.url.pathname };
+const home = `${prefix(lang)}/`;
+const feed = `${prefix(lang)}/rss.xml`;
+const { title, description = copy.description } = Astro.props;
+const links = [0, 1, 3, 2, 4].map(index => [routeGroups[index][lang], copy.nav[index]]);
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 <!doctype html>
-<html lang={en ? "en" : "pt-BR"}>
+<html lang={locale[lang]}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title} · Guionardo Furlan</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    {alternate && <><link rel="alternate" hreflang={en ? 'en' : 'pt-BR'} href={canonical} /><link rel="alternate" hreflang={en ? 'pt-BR' : 'en'} href={new URL(alternate, Astro.site)} /></>}
+    {languages.filter(language => translations[language]).map(language => <link rel="alternate" hreflang={locale[language]} href={new URL(translations[language]!, Astro.site)} />)}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="alternate" type="application/rss+xml" title={en ? "Guionardo Furlan’s blog" : "Blog de Guionardo Furlan"} href={feed} />
+    <link rel="alternate" type="application/rss+xml" title={copy.blog} href={feed} />
     <meta property="og:title" content={`${title} · Guionardo Furlan`} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content={en ? "en_US" : "pt_BR"} />
+    <meta property="og:locale" content={copy.og} />
     <meta name="twitter:card" content="summary" />
   </head>
   <body>
-    <a class="skip" href="#conteudo">{en ? "Skip to content" : "Pular para o conteúdo"}</a>
+    <a class="skip" href="#conteudo">{copy.skip}</a>
     <header class="site-header wrap">
-      <a class="brand" href={home} aria-label={en ? "Guionardo Furlan, home" : "Guionardo Furlan, início"}>gf<span>.</span></a>
-      <nav aria-label={en ? "Main navigation" : "Navegação principal"}>
+      <a class="brand" href={home} aria-label={`Guionardo Furlan, ${copy.nav[0]}`}>gf<span>.</span></a>
+      <nav aria-label={copy.navigation}>
         {links.map(([href, label]) => <a href={href} aria-current={Astro.url.pathname === href || (href !== home && Astro.url.pathname.startsWith(href)) ? 'page' : undefined}>{label}</a>)}
       </nav>
-      <div class="language-switch" aria-label={en ? 'Language' : 'Idioma'}><a href={en ? switchHref : Astro.url.pathname} lang="pt-BR" aria-current={!en ? 'true' : undefined}>PT</a><span aria-hidden="true">/</span><a href={en ? Astro.url.pathname : switchHref} lang="en" aria-current={en ? 'true' : undefined}>EN</a></div>
+      <div class="language-switch" role="group" aria-label={copy.language}>{languages.map(language => <a href={translations[language] ?? `${prefix(language)}/blog/`} lang={locale[language]} aria-current={lang === language ? 'true' : undefined}>{language.toUpperCase()}</a>)}</div>
     </header>
     <main id="conteudo" class="wrap"><slot /></main>
     <footer class="wrap"><span>© {new Date().getFullYear()} Guionardo Furlan</span><div class="footer-links"><a href="https://github.com/guionardo">GitHub ↗</a><a href="https://linkedin.com/in/guionardo">LinkedIn ↗</a><a href={feed}>RSS ↗</a></div></footer>

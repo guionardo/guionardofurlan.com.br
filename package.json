@@ -4,9 +4,11 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "npm run build:site",
     "preview": "astro preview",
-    "build:resume": "node scripts/build-resume.mjs"
+    "build:resume": "node scripts/build-resume.mjs",
+    "build:site": "astro build",
+    "run": "npm run build"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.0",

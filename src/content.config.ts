@@ -6,7 +6,7 @@ export const collections = {
   blog: defineCollection({
     loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
     schema: z.object({
-      lang: z.enum(['pt', 'en']).default('pt'),
+      lang: z.enum(['pt', 'en', 'es']).default('pt'),
       translationKey: z.string().optional(),
       title: z.string(),
       description: z.string(),

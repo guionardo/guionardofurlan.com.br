@@ -1,0 +1,8 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getPosts, formatDate } from '../../../lib/content';
+const posts = await getPosts('es');
+---
+<Base title="Blog"><section class="page-intro"><p class="eyebrow">IDEAS POR ESCRITO</p><h1>Blog<span class="accent">.</span></h1><p>Aprendizajes, reflexiones y notas sobre desarrollo.</p></section>
+{posts.length ? posts.map(post => <a class="post-row" href={`/es/blog/${post.data.slug}/`}><div><p class="eyebrow">{formatDate(post.data.date, 'es')}</p><h2>{post.data.title}</h2><p>{post.data.description}</p><div class="tags">{post.data.tags.map(tag => <span>{tag}</span>)}</div></div><span aria-hidden="true">↗</span></a>) : <div class="empty"><h2>Próximamente, nuevos artículos.</h2><p>También puedes seguir las próximas publicaciones mediante el <a href="/es/rss.xml">feed RSS</a>.</p></div>}
+</Base>

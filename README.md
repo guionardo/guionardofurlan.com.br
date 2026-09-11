@@ -1,6 +1,6 @@
 # Portal pessoal — Guionardo Furlan
 
-Portal estático em Astro, com artigos em Markdown e publicação no GitHub Pages.
+Portal estático em Astro, com artigos em Markdown e publicação automática pelo Cloudflare Workers Builds a cada push no repositório.
 
 Agentes de IA devem seguir [AGENTS.md](AGENTS.md). Todo novo conteúdo público
 deve ser entregue em português e inglês, com atualizações sincronizadas.
@@ -44,27 +44,26 @@ As áreas sem conteúdo real têm estados vazios. O artigo inicial é um rascunh
 e não há experiências, projetos ou contatos fictícios publicados.
 As fontes vêm do Google Fonts, com fontes locais de fallback.
 
-## GitHub Actions e domínio
+## Publicação pelo Cloudflare
 
-1. Crie um repositório no GitHub e envie estes arquivos para a branch `main`,
-   incluindo `package-lock.json`.
-2. Em **Settings → Pages → Build and deployment**, selecione **GitHub Actions**.
-3. Em **Custom domain**, configure `guionardofurlan.com.br`.
-4. No provedor DNS, configure o domínio raiz conforme a documentação atual
-   do GitHub Pages e o CNAME de `www` para `<usuario>.github.io`.
-   Preserve os registros de e-mail e outros serviços existentes.
-5. Após a validação DNS e emissão do certificado, habilite **Enforce HTTPS**.
+O repositório GitHub contém os fontes e os PDFs estáticos. O Cloudflare está
+conectado ao repositório e executa automaticamente o build e a publicação a
+cada push, conforme a configuração de branches no painel.
 
-Pull requests executam o build; atualizações da `main` também publicam `dist/`.
-O domínio canônico está em `astro.config.mjs`, RSS e `public/robots.txt`.
-Não é necessário CNAME no diretório público ao publicar via Actions.
+- Comando de build: `npm run build` (ou `npm run run`).
+- Saída estática: `dist/`, incluindo os currículos de `public/resume/`.
+- O comando de deploy, as branches e o domínio são gerenciados no Cloudflare.
+- Não há workflow de GitHub Actions neste projeto. Não recrie uma publicação
+  paralela por Actions ou GitHub Pages.
 
-- [Domínio personalizado](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
-- [Publicação Astro no GitHub Pages](https://docs.astro.build/en/guides/deploy/github/)
+Antes de enviar alterações, valide o site localmente com `npm run build`.
+Um push pode publicar imediatamente o conteúdo: confirme que os artigos
+prontos estão nos três idiomas e que os demais permanecem em rascunho.
+Os PDFs são atualizados manualmente e devem ser incluídos no commit.
 
-O workflow está preparado, mas repositório remoto, Pages e DNS precisam ser
-configurados na conta do proprietário. Aplicações com backend podem ser
-hospedadas separadamente e vinculadas no catálogo por subdomínios.
+O domínio canônico permanece `guionardofurlan.com.br`, definido em
+`astro.config.mjs`, nos feeds RSS e em `public/robots.txt`. Alterações de domínio
+ou de configuração do Cloudflare devem ser feitas apenas quando solicitadas.
 
 ## Português e inglês
 
@@ -91,34 +90,49 @@ As páginas incluem idioma HTML, canonical e hreflang para traduções existente
 
 ## Currículos em PDF
 
-Fontes ativos:
+A geração dos currículos é **manual**. Os PDFs publicados ficam versionados em:
+
+- `public/resume/Guionardo_Furlan_Resume.pt.pdf`.
+- `public/resume/Guionardo_Furlan_Resume.en.pdf`.
+
+O build do site apenas copia esses arquivos para `dist/resume/`. Não gera PDFs,
+mesmo quando os fontes AsciiDoc mudam. O Cloudflare não precisa
+instalar Asciidoctor ou Chrome para compilar o portal.
+
+Para atualizar os currículos, revise as duas fontes:
 
 - Inglês: `resume/Guionardo_Furlan_Resume.adoc`.
 - Português: `resume/Guionardo_Furlan_Resume.pt.adoc`.
 
-As duas versões usam `resume/resume.css` e `resume/icons/`. Preserve a
-correspondência factual entre elas. Os outros currículos, HTMLs e PDFs em
-`resume/` são históricos e não são publicados pelo pipeline.
+As fontes compartilham `resume/resume.css` e `resume/icons/`. Os outros
+currículos, HTMLs e PDFs em `resume/` são históricos e não são publicados.
 
-Para gerar localmente, instale Asciidoctor 2.0.26 e Google Chrome e execute:
+Na máquina local, com Asciidoctor 2.0.26 e Chrome instalados, execute:
 
 ```sh
 npm run build:resume
-npm run build
 ```
 
 `npm run build:resume -- pt` ou `-- en` gera apenas um idioma. `CHROME_BIN`
-pode apontar para outro executável compatível com Chrome headless.
-A geração trabalha em uma pasta temporária, preservando os arquivos originais.
+permite selecionar outro executável compatível com Chrome headless.
+Confira visualmente os PDFs e inclua os arquivos atualizados de `public/resume/`
+no mesmo commit dos fontes. O script preserva os arquivos históricos de `resume/`.
 
-Downloads: `/resume/Guionardo_Furlan_Resume.pt.pdf` e
-`/resume/Guionardo_Furlan_Resume.en.pdf`. Cada página Sobre oferece seu idioma.
-Antes da primeira prévia local, gere os PDFs com o comando acima.
+Cada página Sobre oferece o PDF correspondente. Um checkout já contém os PDFs;
+não é necessário regenerá-los antes da prévia ou do build do site.
 
-O workflow de Pages restaura os PDFs usando uma chave calculada sobre os
-AsciiDocs, CSS, ícones, script gerador e workflow. Sem cache correspondente,
-instala Asciidoctor e gera ambos os PDFs usando Chrome no runner Ubuntu.
-Portanto, uma alteração em `Guionardo_Furlan_Resume.adoc` (ou na tradução)
-regenera os currículos no próximo push/PR para `main`. Em pushes na `main`,
-os PDFs atualizados seguem com o site para o Pages. Não é necessário commitar
-os PDFs gerados. O build falha se a geração falhar, sem publicar um PDF antigo.
+## Espanhol
+
+O site também está disponível em `/es/`, com navegação PT / EN / ES, feed
+`/es/rss.xml` e metadados por idioma. Artigos espanhóis usam `lang: es` e a
+mesma `translationKey` das outras versões. Rascunhos não aparecem como
+traduções publicadas. O download do currículo na página espanhola é oferecido
+explicitamente em inglês; os PDFs continuam disponíveis em PT e EN.
+
+## Comando de build no Cloudflare Workers Builds
+
+Use `npm run build` (ou `npm run run`). O comando compila o site com Astro e
+inclui os PDFs já versionados em `public/resume/` na saída `dist/resume/`.
+`npm run build:site` é um alias para executar diretamente o build do Astro.
+Nenhum desses comandos gera os currículos ou exige Asciidoctor/Chrome.
+O comando de deploy do Worker permanece o configurado no Cloudflare.
