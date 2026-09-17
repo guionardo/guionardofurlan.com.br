@@ -1,5 +1,9 @@
 ---
+import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import { getResume } from '../../lib/content';
+const resume = await getResume('en');
+const { Content } = resume ? await render(resume) : { Content: () => null };
 ---
 <Base title="About and résumé" description="Software engineer, amateur radio operator and Scouting volunteer. Get to know Guionardo Furlan, his background and his interests."><section class="page-intro"><p class="eyebrow">ABOUT & RÉSUMÉ</p><h1>Guionardo<br /><em>Furlan.</em></h1><p>I’m Guionardo, a software engineer and, above all, someone who likes understanding how things work — and building things that work.</p><div class="profile-links"><a class="button" href="https://github.com/guionardo">Projects on GitHub ↗</a><a href="https://linkedin.com/in/guionardo">Background on LinkedIn ↗</a></div></section><div class="about-story prose">
   <section><h2>Background and interests</h2>
@@ -25,4 +29,4 @@ import Base from '../../layouts/Base.astro';
   <blockquote><p><strong>“Could this be done?”</strong></p></blockquote>
   <p>Usually, the only way to find out is to try.</p>
 </div>
-<section class="empty"><h2>Professional background</h2><p>Explore my background on <a href="https://linkedin.com/in/guionardo">LinkedIn</a>. You can also download my résumé below.</p><a class="button" href="/resume/Guionardo_Furlan_Resume.en.pdf" download>Download résumé (PDF, English) ↓</a></section></Base>
+<section><h2>Professional background</h2><p>Explore my background on <a href="https://linkedin.com/in/guionardo">LinkedIn</a>. You can also download my résumé below.</p><div class="prose resume"><Content /></div><a class="button" href="/resume/Guionardo_Furlan_Resume.en.pdf" download>Download résumé (PDF, English) ↓</a></section></Base>

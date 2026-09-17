@@ -45,6 +45,11 @@ export async function getSeriesPosts(key: string, lang: Language = 'pt') {
     .sort((a, b) => (a.data.seriesOrder ?? 0) - (b.data.seriesOrder ?? 0));
 }
 
+export async function getResume(lang: Language = 'pt') {
+  const all = await getCollection('resume');
+  return all.find(r => r.data.lang === lang) ?? null;
+}
+
 export const formatDate = (date: Date, lang: Language = 'pt') => new Intl.DateTimeFormat(locale[lang], {
   day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
 }).format(date);

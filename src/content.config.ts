@@ -28,4 +28,10 @@ export const collections = {
       description: z.string(),
     }),
   }),
+  resume: defineCollection({
+    loader: glob({ pattern: '**/*.md', base: './src/content/resume' }),
+    schema: z.object({
+      lang: z.enum(['pt', 'en', 'es']).default('pt'),
+    }),
+  }),
 };
