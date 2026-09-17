@@ -14,6 +14,16 @@ export const collections = {
       slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
       tags: z.array(z.string()).default([]),
       draft: z.boolean().default(true),
+      seriesKey: z.string().optional(),
+      seriesOrder: z.number().int().optional(),
+    }),
+  }),
+  series: defineCollection({
+    loader: glob({ pattern: '**/*.md', base: './src/content/series' }),
+    schema: z.object({
+      lang: z.enum(['pt', 'en', 'es']).default('pt'),
+      name: z.string(),
+      description: z.string(),
     }),
   }),
 };

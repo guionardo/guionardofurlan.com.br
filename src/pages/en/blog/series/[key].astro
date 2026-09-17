@@ -1,0 +1,18 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import { getPosts, getSeries, seriesKeyFromId, formatDate } from '../../../../lib/content';
+import { seriesCopy } from '../../../../lib/i18n';
+const lang = 'en';
+const copy = seriesCopy[lang];
+export async function getStaticPaths() {
+  return (await getSeries('en')).map(series => ({ params: { key: seriesKeyFromId(series.id) } }));
+}
+const { key } = Astro.params;
+const series = (await getSeries(lang)).find(s => seriesKeyFromId(s.id) === key);
+const posts = (await getPosts(lang)).filter(p => p.data.seriesKey === key).sort((a, b) => (a.data.seriesOrder ?? 0) - (b.data.seriesOrder ?? 0));
+if (!series) throw new Error(`Series not found: ${key}`);
+---
+<Base title={series.data.name} translations={{ pt: `/blog/series/${key}/`, en: `/en/blog/series/${key}/`, es: `/es/blog/series/${key}/` }}>
+  <section class="page-intro"><p class="eyebrow"><a href="/en/blog/series/">← {copy.allSeries}</a></p><h1>{series.data.name}</h1><p>{series.data.description}</p></section>
+  {posts.length ? posts.map((post, i) => <a class="post-row" href={`/en/blog/${post.data.slug}/`}><div><p class="eyebrow">{copy.chapter} {i + 1} · {formatDate(post.data.date, lang)}</p><h2>{post.data.title}</h2><p>{post.data.description}</p></div><span aria-hidden="true">↗</span></a>) : <div class="empty"><h2>{copy.empty}</h2></div>}
+</Base>

@@ -12,3 +12,41 @@ export const routeGroups: Record<Language, string>[] = [
   { pt: '/projetos/tessera-guard/', en: '/en/projects/tessera-guard/', es: '/es/proyectos/tessera-guard/' },
 ];
 export const languageFromPath = (path: string): Language => path.startsWith('/es/') ? 'es' : path.startsWith('/en/') ? 'en' : 'pt';
+
+export const seriesCopy: Record<Language, {
+  series: string;
+  chapter: string;
+  previous: string;
+  next: string;
+  allSeries: string;
+  posts: string;
+  empty: string;
+}> = {
+  pt: {
+    series: 'Série',
+    chapter: 'Capítulo',
+    previous: 'Anterior',
+    next: 'Próximo',
+    allSeries: 'Todas as séries',
+    posts: 'Artigos',
+    empty: 'Nenhum artigo publicado nesta série ainda.',
+  },
+  en: {
+    series: 'Series',
+    chapter: 'Chapter',
+    previous: 'Previous',
+    next: 'Next',
+    allSeries: 'All series',
+    posts: 'Posts',
+    empty: 'No published posts in this series yet.',
+  },
+  es: {
+    series: 'Serie',
+    chapter: 'Capítulo',
+    previous: 'Anterior',
+    next: 'Siguiente',
+    allSeries: 'Todas las series',
+    posts: 'Artículos',
+    empty: 'Aún no hay artículos publicados en esta serie.',
+  },
+};

@@ -1,0 +1,19 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import { getPosts, getSeries, seriesKeyFromId } from '../../../../lib/content';
+import { seriesCopy } from '../../../../lib/i18n';
+const lang = 'en';
+const copy = seriesCopy[lang];
+const posts = await getPosts(lang);
+const entries = (await getSeries(lang)).map(series => ({
+  series,
+  count: posts.filter(p => p.data.seriesKey === seriesKeyFromId(series.id)).length,
+}));
+---
+<Base title={copy.series} translations={{ pt: '/blog/series/', en: '/en/blog/series/', es: '/es/blog/series/' }}>
+  <section class="page-intro"><p class="eyebrow">SERIES</p><h1>{copy.series}<span class="accent">.</span></h1><p>Posts grouped in sequence, chapter by chapter.</p></section>
+  {entries.length ? entries.map(({ series, count }) => {
+    const key = seriesKeyFromId(series.id);
+    return <a class="post-row" href={`/en/blog/series/${key}/`}><div><p class="eyebrow">{count} {copy.posts}</p><h2>{series.data.name}</h2><p>{series.data.description}</p></div><span aria-hidden="true">↗</span></a>;
+  }) : <div class="empty"><h2>{copy.empty}</h2></div>}
+</Base>
