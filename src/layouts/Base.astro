@@ -4,9 +4,9 @@ import { languages, locale, prefix, routeGroups, languageFromPath, type Language
 interface Props { title: string; description?: string; translations?: Partial<Record<Language, string>> }
 const lang = languageFromPath(Astro.url.pathname);
 const copy = {
-  pt: { description: 'Artigos, projetos e trajetória de Guionardo Furlan. Ideias, ferramentas e produtos.', nav: ['Início', 'Blog', 'Sobre & currículo', 'Projetos', 'Ferramentas'], skip: 'Pular para o conteúdo', navigation: 'Navegação principal', language: 'Idioma', blog: 'Blog de Guionardo Furlan', og: 'pt_BR' },
-  en: { description: 'Articles, projects and background of Guionardo Furlan. Ideas, tools and products.', nav: ['Home', 'Blog', 'About & résumé', 'Projects', 'Tools'], skip: 'Skip to content', navigation: 'Main navigation', language: 'Language', blog: 'Guionardo Furlan’s blog', og: 'en_US' },
-  es: { description: 'Artículos, proyectos y trayectoria de Guionardo Furlan. Ideas, herramientas y productos.', nav: ['Inicio', 'Blog', 'Sobre mí & currículo', 'Proyectos', 'Herramientas'], skip: 'Saltar al contenido', navigation: 'Navegación principal', language: 'Idioma', blog: 'Blog de Guionardo Furlan', og: 'es_ES' },
+  pt: { description: 'Artigos, projetos e trajetória de Guionardo Furlan. Ideias, ferramentas e produtos.', nav: ['Início', 'Blog', 'Sobre & currículo', 'Projetos', 'Ferramentas'], skip: 'Pular para o conteúdo', navigation: 'Navegação principal', language: 'Idioma', blog: 'Blog de Guionardo Furlan', og: 'pt_BR', ogImageAlt: 'Site de Guionardo Furlan — artigos, projetos e ferramentas.' },
+  en: { description: 'Articles, projects and background of Guionardo Furlan. Ideas, tools and products.', nav: ['Home', 'Blog', 'About & résumé', 'Projects', 'Tools'], skip: 'Skip to content', navigation: 'Main navigation', language: 'Language', blog: 'Guionardo Furlan’s blog', og: 'en_US', ogImageAlt: 'Guionardo Furlan’s website — articles, projects and tools.' },
+  es: { description: 'Artículos, proyectos y trayectoria de Guionardo Furlan. Ideas, herramientas y productos.', nav: ['Inicio', 'Blog', 'Sobre mí & currículo', 'Proyectos', 'Herramientas'], skip: 'Saltar al contenido', navigation: 'Navegación principal', language: 'Idioma', blog: 'Blog de Guionardo Furlan', og: 'es_ES', ogImageAlt: 'Sitio web de Guionardo Furlan — artículos, proyectos y herramientas.' },
 }[lang];
 const translations = Astro.props.translations ?? routeGroups.find(group => group[lang] === Astro.url.pathname) ?? { [lang]: Astro.url.pathname };
 const home = `${prefix(lang)}/`;
@@ -31,7 +31,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:url" content={canonical} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={copy.og} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:site_name" content="Guionardo Furlan" />
+    <meta property="og:image" content={new URL(`/images/og-default.${lang}.png`, Astro.site)} />
+    <meta property="og:image:alt" content={copy.ogImageAlt} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <a class="skip" href="#conteudo">{copy.skip}</a>
