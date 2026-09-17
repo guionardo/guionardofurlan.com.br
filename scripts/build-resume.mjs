@@ -6,17 +6,17 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const selected = process.argv[2];
-if (selected && !['pt', 'en'].includes(selected)) throw new Error('Use pt ou en, ou omita para gerar ambos.');
+if (selected && !['pt', 'en', 'es'].includes(selected)) throw new Error('Use pt, en ou es, ou omita para gerar todos.');
 const chrome = process.env.CHROME_BIN || (process.platform === 'darwin'
   ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' : 'google-chrome');
 const output = resolve(root, 'public/resume');
 mkdirSync(output, { recursive: true });
-for (const lang of selected ? [selected] : ['pt', 'en']) {
+for (const lang of selected ? [selected] : ['pt', 'en', 'es']) {
   const work = mkdtempSync(join(tmpdir(), 'portal-resume-'));
   try {
     // Trabalhar em uma cópia preserva os fontes e PDFs históricos de resume/.
     cpSync(resolve(root, 'resume'), work, { recursive: true });
-    const source = lang === 'en' ? 'Guionardo_Furlan_Resume.adoc' : 'Guionardo_Furlan_Resume.pt.adoc';
+    const source = lang === 'en' ? 'Guionardo_Furlan_Resume.adoc' : `Guionardo_Furlan_Resume.${lang}.adoc`;
     const html = join(work, 'resume.html');
     const pdf = join(work, 'resume.pdf');
     execFileSync('asciidoctor', ['--failure-level', 'WARN', '-a', 'nofooter', '-o', html, join(work, source)], { stdio: 'inherit' });

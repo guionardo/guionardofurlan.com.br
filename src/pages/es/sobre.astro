@@ -1,5 +1,9 @@
 ---
+import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import { getResume } from '../../lib/content';
+const resume = await getResume('es');
+const { Content } = resume ? await render(resume) : { Content: () => null };
 ---
 <Base title="Sobre mí y currículo" description="Ingeniero de software, radioaficionado y voluntario scout. Conoce a Guionardo Furlan, su trayectoria y sus intereses."><section class="page-intro"><p class="eyebrow">SOBRE MÍ & CURRÍCULO</p><h1>Guionardo<br /><em>Furlan.</em></h1><p>Soy Guionardo, ingeniero de software y, sobre todo, alguien a quien le gusta entender cómo funcionan las cosas y construir cosas que funcionen.</p><div class="profile-links"><a class="button" href="https://github.com/guionardo">Proyectos en GitHub ↗</a><a href="https://linkedin.com/in/guionardo">Trayectoria en LinkedIn ↗</a></div></section><div class="about-story prose">
   <section><h2>Trayectoria e intereses</h2>
@@ -25,4 +29,4 @@ import Base from '../../layouts/Base.astro';
   <blockquote><p><strong>«¿Se podrá hacer esto?»</strong></p></blockquote>
   <p>Normalmente, la única manera de descubrirlo es intentándolo.</p>
 </div>
-<section class="empty"><h2>Trayectoria profesional</h2><p>Conoce mi trayectoria en <a href="https://linkedin.com/in/guionardo">LinkedIn</a>. También puedes descargar mi currículo en inglés a continuación.</p><a class="button" href="/resume/Guionardo_Furlan_Resume.en.pdf" download>Descargar currículo (PDF, inglés) ↓</a></section></Base>
+<section><h2>Trayectoria profesional</h2><p>Conoce mi trayectoria en <a href="https://linkedin.com/in/guionardo">LinkedIn</a>. También puedes descargar mi currículo a continuación.</p><div class="prose resume"><Content /></div><a class="button" href="/resume/Guionardo_Furlan_Resume.es.pdf" download>Descargar currículo (PDF, español) ↓</a></section></Base>

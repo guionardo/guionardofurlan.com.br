@@ -1,0 +1,132 @@
+= Guionardo Furlan
+:doctype: article
+:encoding: utf-8
+:lang: es
+:sectnums!:
+:toc!:
+:icons: font
+:stylesheet: resume.css
+:linkcss:
+:source-highlighter: none
+
+[.contact]
+image:icons/linkedin.png[LinkedIn] https://www.linkedin.com/in/guionardo[LinkedIn] | image:icons/phone.png[Teléfono] +55 (47) 98805-0705 | image:icons/email.png[Correo electrónico] mailto:guionardo@guionardofurlan.com.br[guionardo@guionardofurlan.com.br] | image:icons/github.png[GitHub] https://github.com/guionardo[GitHub]
+
+== Competencias
+
+* GoLang, Python (Django, FastAPI, scripting), C#
+* Cloud & DevOps (MS Azure, GCP), Diseño de Sistemas, Microservicios, APIs, Docker, Linux
+* MySQL, MariaDB, PostgreSQL, SQL Server, SQLite, Oracle
+* Pruebas unitarias y de integración (TDD), Docker, Kubernetes, Bash, JavaScript, PHP, Virtualización, IoT (Raspberry Pi/Arduino), Desarrollo asistido por IA
+* Idiomas: Portugués (nativo), Inglés (nivel intermedio)
+
+== Experiencia
+
+[.job]
+=== [.job-title]#Ingeniero de Software Sénior# [.job-company]#WK Sistemas# [.job-where]#Blumenau, BR (Presencial/híbrido)# [.job-dates]#11/2025 – 08/2026#
+
+[.company-description]
+_WK Sistemas ofrece soluciones empresariales de ERP y gestión._
+
+* Trabajé en el proyecto de plataforma concebido como base para el flujo de IA en los softwares ERP de WK.
+* Desarrollé APIs robustas y workers en segundo plano para integrar datos internos del ERP con servicios externos y de terceros.
+* Construí componentes y paquetes fundamentales del SDK oficial de la empresa, proporcionando la base para la creación de nuevas aplicaciones.
+
+[.tech-stack]
+*Tecnologías:* GoLang, .NET / C#, MS Azure, Agentes de IA (Cursor/Claude).
+
+[.job]
+=== [.job-title]#Ingeniero de Software Sénior# [.job-company]#Mercado Livre# [.job-where]#Florianópolis, BR (Remoto/híbrido)# [.job-dates]#08/2024 – 09/2025#
+
+[.company-description]
+_Mercado Livre es el principal ecosistema de comercio electrónico y fintech de América Latina._
+
+* En el equipo FBM-Fiscal, desarrollé aplicaciones en GoLang y Java para la orquestación de notas fiscales, optimizando la logística de fulfillment en las plataformas regionales de Brasil, Chile y Perú.
+* Mejoré la eficiencia de desarrollo del equipo construyendo bibliotecas de mocks y mecanismos especializados de enrutamiento.
+* Fortalecí la seguridad de la plataforma mediante el tratamiento y la mitigación proactiva de vulnerabilidades de código.
+* Contribuí a actualizaciones tecnológicas y al intercambio interno de conocimiento, manteniendo al equipo alineado con las buenas prácticas modernas del sector.
+
+[.tech-stack]
+*Tecnologías:* GoLang, Java, Microservicios, Diseño de Sistemas, APIs REST.
+
+[.job]
+=== [.job-title]#Ingeniero de Software Sénior# [.job-company]#Levva# [.job-where]#Campinas, BR (Remoto)# [.job-dates]#01/2024 – 08/2024#
+
+[.company-description]
+_Levva es una consultora de desarrollo de software centrada en soluciones digitales a medida._
+
+* Desarrollé mecanismos de contingencia y consolidación de datos para la plataforma fintech _Jeitto.com.br_, garantizando alta integridad de datos y disponibilidad de los servicios.
+* Optimicé procesos de cobro financiero, reduciendo significativamente la intervención manual y aumentando el rendimiento operativo.
+* Trabajé en integraciones entre operaciones de back-office, plataformas de core banking y servicios internos, simplificando el flujo de datos entre sistemas.
+
+[.tech-stack]
+*Tecnologías:* Python (Flask, scripting, Apache Airflow), Google Cloud.
+
+[.job]
+=== [.job-title]#Ingeniero de Software Sénior# [.job-company]#AmbevTech# [.job-where]#Blumenau, BR (Presencial/híbrido)# [.job-dates]#08/2019 – 01/2024#
+
+[.company-description]
+_AmbevTech es el polo tecnológico de AB InBev / Ambev, centrado en la transformación digital y la logística._
+
+* Desarrollé microservicios y APIs en Python y C# para extraer, transformar y transmitir datos de ERPs legados hacia entornos de plataformas modernas. Estos casos se convirtieron en una referencia para la transición de la empresa de sistemas monolíticos a arquitectura de microservicios y fueron presentados en conferencias de Python.
+* Construí herramientas de línea de comandos (CLI) que simplificaron los flujos internos de ingeniería.
+* Impartí formaciones internas de C# para desarrolladores COBOL, conduciendo la transición técnica de ingenieros hacia tecnologías modernas.
+* Colaboré en la gestión de proyectos y en la automatización de build e implantación en MS Azure.
+
+[.tech-stack]
+*Tecnologías:* Python (Flask, FastAPI, Python puro), C# (core), MS Azure, Microservicios, CLI, Docker, SQL Server, PostgreSQL.
+
+[.job]
+=== [.job-title]#Desarrollador de Software# [.job-company]#Philips# [.job-where]#Blumenau, BR (Presencial)# [.job-dates]#03/2019 – 08/2019#
+
+[.company-description]
+_Philips Healthcare proporciona software de gestión clínica y administrativa en salud (Tasy)._
+
+* Realicé mantenimiento y desarrollo de funcionalidades del módulo de Operadoras de Salud (ODS) del software Tasy.
+* Este trabajo implicó atender demandas de clientes, implementar nuevas funcionalidades y corregir bugs, garantizando la continuidad y la mejora del sistema.
+
+[.tech-stack]
+*Tecnologías:* Oracle PL/SQL, Java, JavaScript, Delphi.
+
+[.job]
+=== [.job-title]#Desarrollador de Software# [.job-company]#Time Informatica# [.job-where]#Blumenau, BR (Presencial)# [.job-dates]#09/2012 – 03/2019#
+
+[.company-description]
+_Time Informática ofrece sistemas ERP comerciales y herramientas operativas de escritorio._
+
+* Desarrollé y mantuve sistemas ERP comerciales, aplicaciones fiscales complementarias (PAF-ECF) y software operativo para clientes.
+* Implementé y administré servidores de aplicación para garantizar estabilidad operativa y escalabilidad.
+* Creé herramientas internas automatizadas, incluyendo servidores de licenciamiento y telemetría de aplicaciones, optimizando los flujos de soporte técnico y monitorización.
+
+[.tech-stack]
+*Tecnologías:* Visual FoxPro, Lazarus/FPC, PHP, Python, Automatización de servidores Linux, MySQL/MariaDB.
+
+== Proyectos
+
+=== Escoteirando
+
+https://github.com/escoteirando[GitHub]
+
+* Escoteirando Suite es una plataforma digital unificada para los Escoteiros do Brasil (UEB) que reúne las herramientas cotidianas necesarias para que escotistas y familias conduzcan sus grupos en un ecosistema coordinado. En lugar de aplicaciones desconectadas, ofrece una experiencia consistente en la que todos los productos comparten el mismo lenguaje y el mismo login. Así, un escotista puede alternar entre la gestión de la sección, la planificación de actividades y el seguimiento de la progresión sin tener que reaprender un sistema en cada etapa.
+
+[.comment]
+_Este proyecto está en desarrollo._
+
+== Formación
+
+* Posgrado en Data Science & Big Data Analytics – Faculdade Metropolitana _(2020)_
+* Grado en Ingeniería de Software – UniCesumar _(2016 – 2020)_
+* Grado en Fisioterapia – FURB _(1997 – 2001)_
+
+== Certificaciones
+
+* *Ultimate Go Programming* – O'Reilly (Bill Kennedy)
+* *Fundamentos de Arquitectura de Software* – https://desenvolvedor.io[Desenvolvedor.io]
+* *Python: Advanced Design Patterns* – LinkedIn Learning
+* *Software Architecture: Patterns for Developers* – LinkedIn Learning
+* *Software Architecture: Breaking a Monolith into Microservices* – LinkedIn Learning
+
+== Voluntariado y comunidad
+
+* *Escotista (GE Leões de Blumenau)* _(2018 – Actualidad)_: Gestión de equipos, desarrollo de liderazgo, estímulo de habilidades sociales y planificación de actividades para jóvenes.
+* *Ponente / Instructor*: Impartí formaciones de C# para equipos de sistemas legados (AmbevTech, 2023), cursos de Python (Uniasselvi, 2022) y una charla en la Python Sul sobre "Extracción de Datos de Monolitos a Microservicios" (2022).
