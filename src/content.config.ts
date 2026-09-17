@@ -16,6 +16,8 @@ export const collections = {
       draft: z.boolean().default(true),
       seriesKey: z.string().optional(),
       seriesOrder: z.number().int().optional(),
+      heroImage: z.string().optional(),
+      heroImageAlt: z.string().optional(),
     }),
   }),
   series: defineCollection({

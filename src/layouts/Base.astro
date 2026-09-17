@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import { languages, locale, prefix, routeGroups, languageFromPath, type Language } from '../lib/i18n';
-interface Props { title: string; description?: string; translations?: Partial<Record<Language, string>>; article?: { publishedTime: string; author: string } }
+interface Props { title: string; description?: string; translations?: Partial<Record<Language, string>>; article?: { publishedTime: string; author: string }; image?: string; imageAlt?: string }
 const lang = languageFromPath(Astro.url.pathname);
 const copy = {
   pt: { description: 'Artigos, projetos e trajetória de Guionardo Furlan. Ideias, ferramentas e produtos.', nav: ['Início', 'Blog', 'Sobre & currículo', 'Projetos', 'Ferramentas'], skip: 'Pular para o conteúdo', navigation: 'Navegação principal', language: 'Idioma', blog: 'Blog de Guionardo Furlan', og: 'pt_BR', ogImageAlt: 'Site de Guionardo Furlan — artigos, projetos e ferramentas.' },
@@ -11,7 +11,9 @@ const copy = {
 const translations = Astro.props.translations ?? routeGroups.find(group => group[lang] === Astro.url.pathname) ?? { [lang]: Astro.url.pathname };
 const home = `${prefix(lang)}/`;
 const feed = `${prefix(lang)}/rss.xml`;
-const { title, description = copy.description, article } = Astro.props;
+const { title, description = copy.description, article, image, imageAlt } = Astro.props;
+const ogImage = image ?? `/images/og-default.${lang}.png`;
+const ogImageAlt = imageAlt ?? copy.ogImageAlt;
 const links = [0, 1, 3, 2, 4].map(index => [routeGroups[index][lang], copy.nav[index]]);
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -36,10 +38,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       <meta property="article:author" content={article.author} />
     </>}
     <meta property="og:site_name" content="Guionardo Furlan" />
-    <meta property="og:image" content={new URL(`/images/og-default.${lang}.png`, Astro.site)} />
-    <meta property="og:image:alt" content={copy.ogImageAlt} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    {!image && <>
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+    </>}
     <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
