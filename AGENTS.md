@@ -149,11 +149,15 @@ Atualize sempre os arquivos correspondentes:
 
 Alterações apenas em documentação interna não exigem executar o build.
 
-## Currículos AsciiDoc e PDF
+## Currículos AsciiDoc, Markdown e PDF
 
 - Inglês: `resume/Guionardo_Furlan_Resume.adoc`.
 - Português: `resume/Guionardo_Furlan_Resume.pt.adoc`.
-- Atualize sempre o par, preservando cargos, datas, qualificações e contatos.
+- Os `.adoc` são a fonte canônica. As versões Markdown derivadas ficam em
+  `src/content/resume/resume-pt.md` e `resume-en.md` e são exibidas nas
+  páginas `/sobre/` e `/en/about/` (a página espanhola não exibe currículo).
+- Atualize sempre o trio — `.adoc` + `.md` + PDF —, preservando cargos, datas,
+  qualificações e contatos, na mesma entrega.
   Os demais arquivos históricos em `resume/` não são fontes de publicação.
 - A geração de PDFs é exclusivamente manual, com `npm run build:resume`.
   Não adicione geração automática ao build do site, hooks npm ou pipelines.
@@ -163,8 +167,8 @@ Alterações apenas em documentação interna não exigem executar o build.
   Ao atualizar um currículo, gere e revise os PDFs manualmente e inclua-os
   junto dos fontes na entrega. Não regenere PDFs em tarefas sem esse escopo.
 - Alterar AsciiDoc, CSS ou ícones não dispara geração automática.
-- Confira visualmente os PDFs nos dois idiomas disponíveis antes de entregar
-  uma atualização dos currículos.
+- Confira visualmente os PDFs nos dois idiomas disponíveis e as páginas
+  `/sobre/` e `/en/about/` antes de entregar uma atualização dos currículos.
 
 
 ### Espanhol e builds
@@ -174,9 +178,9 @@ Alterações apenas em documentação interna não exigem executar o build.
   `lang: es` e revisão da tradução espanhola.
 - As páginas espanholas ficam em `src/pages/es/`. Mantenha as correspondências
   de navegação em `src/lib/i18n.ts` e os textos comuns em `Base.astro`.
-- Exceção atual: os currículos PDF continuam em PT e EN. A página espanhola
-  identifica explicitamente seu download como inglês; não apresenta uma
-  tradução inexistente. Mantenha as duas fontes AsciiDoc sincronizadas.
+- Exceção atual: os currículos continuam em PT e EN (PDF e Markdown). A página
+  espanhola identifica explicitamente seu download como inglês; não apresenta
+  uma tradução inexistente. Mantenha as fontes AsciiDoc e Markdown sincronizadas.
 - `npm run build` (ou `npm run run`) compila apenas o site e copia os PDFs
   versionados para `dist/resume/`. `build:site` executa o Astro diretamente.
   O build e os pipelines não dependem de Asciidoctor ou Chrome.
