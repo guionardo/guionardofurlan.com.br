@@ -31,6 +31,28 @@ Markdown é o formato implementado. AsciiDoc é uma evolução futura: um loader
 renderizador precisarão normalizar os mesmos metadados e preservar os slugs.
 O acesso às publicações está centralizado em `src/lib/content.ts`.
 
+## Sincronizar a série K3s
+
+Os artigos da série **Homelab Kubernetes** têm como fonte editorial o repositório
+`guionardo/guiosoft-k3s-lab`. Para atualizar as versões PT/EN/ES no formato da
+collection Astro, mantenha os dois repositórios em checkouts locais e execute:
+
+```sh
+python3 scripts/import-k3s-articles.py --source ../guiosoft-k3s-lab
+npm run build
+```
+
+O importador exige o conjunto completo PT/EN/ES, remove o H1 da fonte porque o
+layout Astro já renderiza o título, preserva a data dos artigos existentes e
+mantém slugs, `translationKey`, `seriesKey` e ordem da série definidos pelo site.
+Ele apenas altera arquivos locais: não executa commit, push ou deploy.
+
+Para detectar divergência sem escrever arquivos:
+
+```sh
+python3 scripts/import-k3s-articles.py --source ../guiosoft-k3s-lab --check
+```
+
 ## Personalizar
 
 - Apresentação: `src/pages/index.astro`.
