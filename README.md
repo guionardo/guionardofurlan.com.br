@@ -43,8 +43,10 @@ npm run build
 ```
 
 O importador exige o conjunto completo PT/EN/ES, remove o H1 da fonte porque o
-layout Astro já renderiza o título, preserva a data dos artigos existentes e
-mantém slugs, `translationKey`, `seriesKey` e ordem da série definidos pelo site.
+layout Astro já renderiza o título e preserva a data dos artigos existentes.
+O catálogo canônico `docs/articles/catalog.json` do repositório fonte define
+slugs, `translationKey`, `seriesKey`, ordem, descrições, tags e nomes de destino.
+Assim, novos artigos são adicionados ao catálogo sem alterar o código do importador.
 Ele apenas altera arquivos locais: não executa commit, push ou deploy.
 
 Para detectar divergência sem escrever arquivos:
