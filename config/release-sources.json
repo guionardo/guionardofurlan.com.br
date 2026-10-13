@@ -1,0 +1,12 @@
+{
+  "repositories": [
+    {
+      "name": "guionardo/vfp-inspect",
+      "enabled": false
+    },
+    {
+      "name": "guiosoft/ariadne",
+      "enabled": false
+    }
+  ]
+}
