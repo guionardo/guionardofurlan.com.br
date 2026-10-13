@@ -1,0 +1,41 @@
+name: Draft release posts
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 11 * * *'
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: release-posts
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Generate drafts
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/release_posts.py
+      - run: npm ci
+      - run: npm run build
+      - name: Open review PR
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ github.token }}
+          branch: automation/release-posts
+          delete-branch: true
+          title: 'content: review generated release announcements'
+          body: |
+            Generated release announcements in PT, EN and ES.
+            All posts remain drafts. Review source releases and translations before publication.
+          commit-message: 'content: generate release announcement drafts'
+          add-paths: src/content/blog/
