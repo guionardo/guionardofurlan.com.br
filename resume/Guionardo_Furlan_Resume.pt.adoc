@@ -10,7 +10,7 @@
 :source-highlighter: none
 
 [.contact]
-https://www.linkedin.com/in/guionardo[LinkedIn] | +55 (47) 98805-0705 | mailto:guionardo@guionardofurlan.com.br[guionardo@guionardofurlan.com.br] | https://github.com/guionardo[GitHub] | Brasil
+image:icons/linkedin.png[LinkedIn] https://www.linkedin.com/in/guionardo[LinkedIn] | image:icons/phone.png[Telefone] +55 (47) 98805-0705 | image:icons/email.png[E-mail] mailto:guionardo@guionardofurlan.com.br[guionardo@guionardofurlan.com.br] | image:icons/github.png[GitHub] https://github.com/guionardo[GitHub] | Brasil
 
 == Engenheiro de Software Sênior — Backend
 
