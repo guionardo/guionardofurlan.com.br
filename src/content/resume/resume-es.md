@@ -14,7 +14,7 @@ Ingeniero de software con más de 10 años de experiencia en desarrollo, especia
 - Backend: APIs REST, Microservicios, Sistemas orientados a eventos, Integraciones, Workers, Pruebas automatizadas
 - MySQL, MariaDB, PostgreSQL, SQL Server, SQLite, Oracle
 - Infraestructura: Linux, Docker, Kubernetes, Azure, Google Cloud Platform (GCP), CI/CD
-- Idiomas: Portugués (nativo); inglés (lectura, escritura y comunicación técnica)
+- Idiomas: Portugués (nativo); inglés (B1 – intermedio, comunicación técnica)
 
 ## Experiencia profesional
 
