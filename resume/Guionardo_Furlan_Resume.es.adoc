@@ -60,6 +60,7 @@ _Mercado Livre es el principal ecosistema de comercio electrónico y fintech de 
 _Levva es una consultora de desarrollo de software centrada en soluciones digitales a medida._
 
 * Desarrollé mecanismos de contingencia y consolidación de datos para la plataforma fintech _Jeitto.com.br_, garantizando alta integridad de datos y disponibilidad de los servicios.
+* Durante un incidente de procesamiento de facturación, el sistema de conciliación financiera procesó más de 300.000 facturas durante una noche como parte de la recuperación.
 * Optimicé procesos de cobro financiero, reduciendo significativamente la intervención manual y aumentando el rendimiento operativo.
 * Trabajé en integraciones entre operaciones de back-office, plataformas de core banking y servicios internos, simplificando el flujo de datos entre sistemas.
 
