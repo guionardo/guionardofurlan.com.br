@@ -102,5 +102,6 @@ Ingeniero de software con más de 10 años de experiencia en desarrollo, especia
 
 ## Voluntariado y comunidad
 
-- *Escotista (GE Leões de Blumenau)* _(2018 – Actualidad)_: Gestión de equipos, desarrollo de liderazgo, estímulo de habilidades sociales y planificación de actividades para jóvenes.
-- *Ponente / Instructor*: Impartí formaciones de C# para equipos de sistemas legados (AmbevTech, 2023), cursos de Python (Uniasselvi, 2022) y una charla en la Python Sul sobre "Extracción de Datos de Monolitos a Microservicios" (2022).
+- **Scouter voluntario — Grupo Escoteiro Leões de Blumenau (2018–actualidad):** Participo en la educación de jóvenes a través del escultismo, apoyando actividades educativas, trabajo en equipo, aprendizaje práctico y desarrollo personal.
+- **Ponente e instructor técnico:** Presenté un trabajo sobre modernización de sistemas legados en Python Sul (2022), impartí cursos de Python y formación en C# para desarrolladores procedentes de COBOL.
+
