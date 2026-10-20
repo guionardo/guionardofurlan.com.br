@@ -88,7 +88,11 @@ Engenheiro de software com mais de 10 anos de experiência em desenvolvimento, c
 - Bacharelado em Engenharia de Software — UniCesumar (2016–2020)
 - Pós-graduação em Ciência de Dados e Big Data Analytics — Faculdade Metropolitana (2020)
 
-## Comunidade e Aperfeiçoamento
+## Voluntariado e Comunidade
 
-- Palestrante na Python Sul (2022): "Extração de Dados de Monólitos para Microsserviços"; ministrei cursos de Python e treinamentos internos de C#.
+- **Escotista voluntário — Grupo Escoteiro Leões de Blumenau (2018–atual):** Atuação na educação de jovens por meio do escotismo, apoiando atividades educativas, trabalho em equipe, aprendizagem prática e desenvolvimento pessoal.
+- **Palestrante e instrutor técnico:** Apresentei trabalho sobre modernização de sistemas legados na Python Sul (2022), ministrei cursos de Python e treinamentos de C# para desenvolvedores em transição de COBOL.
+
+## Aperfeiçoamento Profissional
+
 - Cursos selecionados: Ultimate Go Programming (O'Reilly); Fundamentos de Arquitetura de Software; Python: Advanced Design Patterns.
