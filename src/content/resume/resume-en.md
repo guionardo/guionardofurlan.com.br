@@ -88,7 +88,11 @@ Backend engineer with 10+ years of software development experience, focused on G
 - Bachelor's Degree in Software Engineering — UniCesumar (2016–2020)
 - Postgraduate Degree in Data Science & Big Data Analytics — Faculdade Metropolitana (2020)
 
-## Community & Professional Development
+## Volunteering & Community
 
-- Speaker at Python Sul (2022): "Data Extraction from Monoliths to Microservices"; delivered Python courses and internal C# training.
+- **Volunteer Scout Leader — Grupo Escoteiro Leões de Blumenau (2018–Present):** Volunteer in youth education through Scouting, supporting educational activities, teamwork, practical learning, and personal development.
+- **Technical Speaker & Instructor:** Presented legacy modernization work at Python Sul (2022), taught Python courses, and delivered C# training for developers transitioning from COBOL.
+
+## Professional Development
+
 - Selected coursework: Ultimate Go Programming (O'Reilly); Software Architecture Fundamentals; Python: Advanced Design Patterns.
