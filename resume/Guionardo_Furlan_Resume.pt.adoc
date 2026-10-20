@@ -59,6 +59,7 @@ _O Mercado Livre é o principal ecossistema de comércio eletrônico e fintech d
 _A Levva é uma consultoria de desenvolvimento de software focada em soluções digitais sob medida._
 
 * Implementei mecanismos de contingência e consolidação de dados para a fintech Jeitto, apoiando integridade de dados e disponibilidade.
+* Durante um incidente de processamento de faturamento, o sistema de reconciliação financeira processou mais de 300 mil faturas em uma noite como parte da recuperação.
 * Automatizei partes dos processos de cobrança para reduzir intervenções manuais.
 * Integrei sistemas de back-office, plataformas de core banking e serviços internos com Python.
 
