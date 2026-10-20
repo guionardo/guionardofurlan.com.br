@@ -45,8 +45,8 @@ _A WK Sistemas fornece soluções empresariais de ERP e gestão._
 [.company-description]
 _O Mercado Livre é o principal ecossistema de comércio eletrônico e fintech da América Latina._
 
-* Desenvolvi serviços em **Go** e **Java** para orquestração fiscal de operações de fulfillment no Brasil, Chile e Peru, abrangendo recebimento de produtos de sellers, vendas, transferências entre centros de distribuição, devoluções e perdas.
-* Atuei em um domínio de emissão fiscal com volume superior a **200 mil notas fiscais por hora**, cuja complexidade envolvia múltiplos fluxos logísticos e etapas do ciclo de vida dos produtos.
+* Contribuí, como integrante de uma equipe maior de engenharia, para o desenvolvimento de serviços em **Go** e **Java** de orquestração fiscal em operações de fulfillment no Brasil, Chile e Peru.
+* Atuei em fluxos fiscais de recebimento de produtos de sellers, vendas, transferências entre centros de distribuição, devoluções e perdas, em uma operação com emissão superior a **200 mil notas fiscais por hora**. Esse volume representa a operação, não o throughput individual dos serviços em que trabalhei.
 * Criei bibliotecas reutilizáveis de mocks e componentes especializados de roteamento para facilitar desenvolvimento e testes.
 * Identifiquei e corrigi vulnerabilidades de código e contribuí para modernização tecnológica e compartilhamento de conhecimento.
 
