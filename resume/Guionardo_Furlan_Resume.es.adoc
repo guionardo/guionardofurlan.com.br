@@ -45,8 +45,8 @@ _WK Sistemas ofrece soluciones empresariales de ERP y gestión._
 [.company-description]
 _Mercado Livre es el principal ecosistema de comercio electrónico y fintech de América Latina._
 
-* Desarrollé servicios en **Go** y **Java** para la orquestación fiscal de operaciones de fulfillment en Brasil, Chile y Perú, incluyendo recepción de productos de vendedores, ventas, transferencias entre centros de distribución, devoluciones y pérdidas.
-* Trabajé en un dominio de emisión fiscal con un volumen superior a **200.000 documentos fiscales por hora**, cuya complejidad abarcaba múltiples flujos logísticos y etapas del ciclo de vida de los productos.
+* Contribuí, como integrante de un equipo de ingeniería más amplio, al desarrollo de servicios en **Go** y **Java** para la orquestación fiscal de operaciones de fulfillment en Brasil, Chile y Perú.
+* Trabajé en flujos fiscales de recepción de productos de vendedores, ventas, transferencias entre centros de distribución, devoluciones y pérdidas, dentro de una operación que emitía más de **200.000 documentos fiscales por hora**. Este volumen corresponde a la operación general, no al rendimiento individual de los servicios en los que participé.
 * Mejoré la eficiencia de desarrollo del equipo construyendo bibliotecas de mocks y mecanismos especializados de enrutamiento.
 * Fortalecí la seguridad de la plataforma mediante el tratamiento y la mitigación proactiva de vulnerabilidades de código.
 * Contribuí a actualizaciones tecnológicas y al intercambio interno de conocimiento, manteniendo al equipo alineado con las buenas prácticas modernas del sector.
