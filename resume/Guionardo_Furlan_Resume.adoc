@@ -59,6 +59,7 @@ _Mercado Livre is the leading e-commerce and fintech ecosystem in Latin America.
 _Levva is a software development consultancy focused on tailored digital solutions._
 
 * Implemented contingency and data consolidation mechanisms for the Jeitto fintech platform, supporting data integrity and service availability.
+* During a billing processing incident, the financial reconciliation system processed over 300,000 invoices overnight as part of the recovery effort.
 * Automated parts of financial collections workflows to reduce manual intervention.
 * Integrated back-office systems, core-banking platforms, and internal services using Python.
 
