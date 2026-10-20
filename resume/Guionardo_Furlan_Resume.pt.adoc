@@ -30,7 +30,7 @@ Engenheiro de software com mais de 10 anos de experiência em desenvolvimento, c
 === [.job-title]#Engenheiro de Software Sênior# [.job-company]#WK Sistemas# [.job-where]#Blumenau, Brasil (Híbrido)# [.job-dates]#11/2025 – 08/2026#
 
 [.company-description]
-_A WK Sistemas desenvolve soluções de ERP e gestão empresarial para empresas brasileiras._
+_A WK Sistemas fornece soluções empresariais de ERP e gestão._
 
 * Desenvolvi APIs e workers em Go e .NET/C# para integrar dados de ERP a serviços internos e externos.
 * Construí componentes e pacotes reutilizáveis para o SDK oficial da empresa, apoiando o desenvolvimento de novas aplicações.
@@ -43,7 +43,7 @@ _A WK Sistemas desenvolve soluções de ERP e gestão empresarial para empresas 
 === [.job-title]#Engenheiro de Software Sênior# [.job-company]#Mercado Livre# [.job-where]#Florianópolis, Brasil (Remoto/Híbrido)# [.job-dates]#08/2024 – 09/2025#
 
 [.company-description]
-_O Mercado Livre é um dos principais ecossistemas de comércio eletrônico e serviços financeiros da América Latina, com plataformas de marketplace e logística em larga escala._
+_O Mercado Livre é o principal ecossistema de comércio eletrônico e fintech da América Latina._
 
 * Desenvolvi serviços em Go e Java para orquestração de notas fiscais no domínio FBM-Fiscal, apoiando operações de fulfillment no Brasil, Chile e Peru.
 * Criei bibliotecas reutilizáveis de mocks e componentes especializados de roteamento para facilitar desenvolvimento e testes.
@@ -56,7 +56,7 @@ _O Mercado Livre é um dos principais ecossistemas de comércio eletrônico e se
 === [.job-title]#Engenheiro de Software Sênior# [.job-company]#Levva# [.job-where]#Campinas, Brasil (Remoto)# [.job-dates]#01/2024 – 08/2024#
 
 [.company-description]
-_A Levva é uma consultoria brasileira de software que desenvolve soluções digitais sob medida, incluindo projetos para o setor financeiro._
+_A Levva é uma consultoria de desenvolvimento de software focada em soluções digitais sob medida._
 
 * Implementei mecanismos de contingência e consolidação de dados para a fintech Jeitto, apoiando integridade de dados e disponibilidade.
 * Automatizei partes dos processos de cobrança para reduzir intervenções manuais.
@@ -69,7 +69,7 @@ _A Levva é uma consultoria brasileira de software que desenvolve soluções dig
 === [.job-title]#Engenheiro de Software Sênior# [.job-company]#AmbevTech# [.job-where]#Blumenau, Brasil (Híbrido)# [.job-dates]#08/2019 – 01/2024#
 
 [.company-description]
-_A AmbevTech é a organização de tecnologia da Ambev, atuando na transformação digital e em sistemas corporativos da indústria de bebidas._
+_A AmbevTech é o polo de tecnologia da AB InBev / Ambev, com foco em transformação digital e logística._
 
 * Implementei serviços de integração orientados a eventos com Python e C# para distribuir dados de um ERP legado COBOL a consumidores modernos.
 * Desenvolvi validação de schemas e roteamento por domínio, com entrega a APIs, filas de mensagens e armazenamento de objetos.
@@ -84,7 +84,7 @@ _A AmbevTech é a organização de tecnologia da Ambev, atuando na transformaç�
 === [.job-title]#Desenvolvedor de Software# [.job-company]#Philips# [.job-where]#Blumenau, Brasil (Presencial)# [.job-dates]#03/2019 – 08/2019#
 
 [.company-description]
-_A Philips desenvolve tecnologias para saúde, incluindo o Tasy, plataforma de gestão hospitalar e de serviços de saúde._
+_A Philips Healthcare fornece software de gestão clínica e administrativa em saúde (Tasy)._
 
 * Mantive e ampliei o software de saúde Tasy, implementando funcionalidades e correções no módulo de operadoras de saúde.
 
