@@ -45,7 +45,8 @@ _WK Sistemas provides enterprise ERP and management solutions for businesses._
 [.company-description]
 _Mercado Livre is the leading e-commerce and fintech ecosystem in Latin America._
 
-* Developed Go and Java services for invoice orchestration in the FBM-Fiscal domain, supporting fulfillment operations in Brazil, Chile, and Peru.
+* Developed **Go** and **Java** services for fiscal invoice orchestration across fulfillment workflows in Brazil, Chile, and Peru, including seller inbound, sales, distribution-center transfers, returns, and inventory losses.
+* Worked in a fiscal document issuance domain handling over **200,000 invoices per hour**, with complexity spanning multiple product lifecycle and logistics flows.
 * Built reusable mock libraries and specialized routing components to simplify development and testing.
 * Identified and remediated code vulnerabilities and contributed to technology modernization and knowledge sharing.
 
