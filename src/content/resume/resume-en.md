@@ -14,7 +14,7 @@ Backend engineer with 10+ years of software development experience, focused on G
 - *Backend & Architecture:* REST APIs, Microservices, Event-Driven Systems, System Integration, Background Workers, Unit and Integration Testing
 - *Infrastructure & Cloud:* Linux, Docker, Kubernetes, Microsoft Azure, Google Cloud Platform (GCP), CI/CD
 - *Databases:* PostgreSQL, SQL Server, MySQL, MariaDB, SQLite, Oracle
-- *Languages Spoken:* Portuguese (native); English (technical reading, writing, and communication)
+- *Languages Spoken:* Portuguese (native); English (B1 – Intermediate, technical communication)
 
 ## Professional Experience
 
