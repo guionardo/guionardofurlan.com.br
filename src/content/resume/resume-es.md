@@ -4,15 +4,19 @@ lang: es
 
 [LinkedIn](https://www.linkedin.com/in/guionardo) · +55 (47) 98805-0705 · [guionardo@guionardofurlan.com.br](mailto:guionardo@guionardofurlan.com.br) · [GitHub](https://github.com/guionardo)
 
-## Competencias
+## Ingeniero de Software Sénior — Backend
 
-- GoLang, Python (Django, FastAPI, scripting), C#
-- Cloud & DevOps (MS Azure, GCP), Diseño de Sistemas, Microservicios, APIs, Docker, Linux
+Ingeniero de software con más de 10 años de experiencia en desarrollo, especializado en Go, Python y C#/.NET, APIs REST, sistemas distribuidos e integración de sistemas empresariales.
+
+## Competencias técnicas
+
+- Lenguajes: Go (Golang), Python (Django, Flask, FastAPI), C#/.NET, Java, SQL, Bash
+- Backend: APIs REST, Microservicios, Sistemas orientados a eventos, Integraciones, Workers, Pruebas automatizadas
 - MySQL, MariaDB, PostgreSQL, SQL Server, SQLite, Oracle
-- Pruebas unitarias y de integración (TDD), Docker, Kubernetes, Bash, JavaScript, PHP, Virtualización, IoT (Raspberry Pi/Arduino), Desarrollo asistido por IA
-- Idiomas: Portugués (nativo), Inglés (nivel intermedio)
+- Infraestructura: Linux, Docker, Kubernetes, Azure, Google Cloud Platform (GCP), CI/CD
+- Idiomas: Portugués (nativo); inglés (B1 – intermedio, comunicación técnica)
 
-## Experiencia
+## Experiencia profesional
 
 ### Ingeniero de Software Sénior — WK Sistemas — Blumenau, BR (Presencial/híbrido) — 11/2025 – 08/2026
 
@@ -28,7 +32,8 @@ lang: es
 
 *Mercado Livre es el principal ecosistema de comercio electrónico y fintech de América Latina.*
 
-- En el equipo FBM-Fiscal, desarrollé aplicaciones en GoLang y Java para la orquestación de notas fiscales, optimizando la logística de fulfillment en las plataformas regionales de Brasil, Chile y Perú.
+- Contribuí, como integrante de un equipo de ingeniería más amplio, al desarrollo de servicios en **Go** y **Java** para la orquestación fiscal de operaciones de fulfillment en Brasil, Chile y Perú.
+- Trabajé en flujos fiscales de recepción de productos de vendedores, ventas, transferencias entre centros de distribución, devoluciones y pérdidas, dentro de una operación que emitía más de **200.000 documentos fiscales por hora**. Este volumen corresponde a la operación general, no al rendimiento individual de los servicios en los que participé.
 - Mejoré la eficiencia de desarrollo del equipo construyendo bibliotecas de mocks y mecanismos especializados de enrutamiento.
 - Fortalecí la seguridad de la plataforma mediante el tratamiento y la mitigación proactiva de vulnerabilidades de código.
 - Contribuí a actualizaciones tecnológicas y al intercambio interno de conocimiento, manteniendo al equipo alineado con las buenas prácticas modernas del sector.
@@ -39,7 +44,8 @@ lang: es
 
 *Levva es una consultora de desarrollo de software centrada en soluciones digitales a medida.*
 
-- Desarrollé mecanismos de contingencia y consolidación de datos para la plataforma fintech [Jeitto.com.br](https://Jeitto.com.br), garantizando alta integridad de datos y disponibilidad de los servicios.
+- Desarrollé mecanismos de contingencia y consolidación de datos para la plataforma fintech _Jeitto.com.br_, garantizando alta integridad de datos y disponibilidad de los servicios.
+- Diagnostiqué un fallo en el procesamiento de facturación, implementé un hotfix y supervisé los scripts de consolidación hasta la recuperación; el sistema de conciliación procesó más de 300.000 facturas durante una noche.
 - Optimicé procesos de cobro financiero, reduciendo significativamente la intervención manual y aumentando el rendimiento operativo.
 - Trabajé en integraciones entre operaciones de back-office, plataformas de core banking y servicios internos, simplificando el flujo de datos entre sistemas.
 
@@ -49,7 +55,9 @@ lang: es
 
 *AmbevTech es el polo tecnológico de AB InBev / Ambev, centrado en la transformación digital y la logística.*
 
-- Desarrollé microservicios y APIs en Python y C# para extraer, transformar y transmitir datos de ERPs legados hacia entornos de plataformas modernas. Estos casos se convirtieron en una referencia para la transición de la empresa de sistemas monolíticos a arquitectura de microservicios y fueron presentados en conferencias de Python.
+- Implementé servicios de integración orientados a eventos con Python y C# para distribuir datos de un ERP legado COBOL a consumidores modernos.
+- Desarrollé validación de esquemas y enrutamiento por dominio, con entrega a APIs, colas de mensajes y almacenamiento de objetos.
+- Validé aproximadamente 90.000 eventos en cinco minutos en un entorno de desarrollo, sin presentarlo como rendimiento de producción.
 - Construí herramientas de línea de comandos (CLI) que simplificaron los flujos internos de ingeniería.
 - Impartí formaciones internas de C# para desarrolladores COBOL, conduciendo la transición técnica de ingenieros hacia tecnologías modernas.
 - Colaboré en la gestión de proyectos y en la automatización de build e implantación en MS Azure.
@@ -75,31 +83,25 @@ lang: es
 
 *Tecnologías:* Visual FoxPro, Lazarus/FPC, PHP, Python, Automatización de servidores Linux, MySQL/MariaDB.
 
-## Proyectos
+## Proyecto destacado
 
-### Escoteirando
-
-[GitHub](https://github.com/escoteirando)
-
-- Escoteirando Suite es una plataforma digital unificada para los Escoteiros do Brasil (UEB) que reúne las herramientas cotidianas necesarias para que escotistas y familias conduzcan sus grupos en un ecosistema coordinado. En lugar de aplicaciones desconectadas, ofrece una experiencia consistente en la que todos los productos comparten el mismo lenguaje y el mismo login. Así, un escotista puede alternar entre la gestión de la sección, la planificación de actividades y el seguimiento de la progresión sin tener que reaprender un sistema en cada etapa.
-
-*Este proyecto está en desarrollo.*
+- *Escoteirando Suite* — [GitHub](https://github.com/escoteirando): Conjunto de aplicaciones en desarrollo para el movimiento scout brasileño, con herramientas para gestión de grupos y planificación de actividades.
 
 ## Formación
 
-- Posgrado en Data Science & Big Data Analytics – Faculdade Metropolitana *(2020)*
-- Grado en Ingeniería de Software – UniCesumar *(2016 – 2020)*
-- Grado en Fisioterapia – FURB *(1997 – 2001)*
+- Posgrado en Data Science & Big Data Analytics – Faculdade Metropolitana _(2020)_
+- Grado en Ingeniería de Software – UniCesumar _(2016 – 2020)_
 
 ## Certificaciones
 
 - *Ultimate Go Programming* – O'Reilly (Bill Kennedy)
-- *Fundamentos de Arquitectura de Software* – [Desenvolvedor.io](https://desenvolvedor.io)
+- *Fundamentos de Arquitectura de Software* – https://desenvolvedor.io[Desenvolvedor.io]
 - *Python: Advanced Design Patterns* – LinkedIn Learning
 - *Software Architecture: Patterns for Developers* – LinkedIn Learning
 - *Software Architecture: Breaking a Monolith into Microservices* – LinkedIn Learning
 
 ## Voluntariado y comunidad
 
-- *Escotista (GE Leões de Blumenau)* *(2018 – Actualidad)*: Gestión de equipos, desarrollo de liderazgo, estímulo de habilidades sociales y planificación de actividades para jóvenes.
-- *Ponente / Instructor*: Impartí formaciones de C# para equipos de sistemas legados (AmbevTech, 2023), cursos de Python (Uniasselvi, 2022) y una charla en la Python Sul sobre "Extracción de Datos de Monolitos a Microservicios" (2022).
+- **Scouter voluntario — Grupo Escoteiro Leões de Blumenau (2018–actualidad):** Participo en la educación de jóvenes a través del escultismo, apoyando actividades educativas, trabajo en equipo, aprendizaje práctico y desarrollo personal.
+- **Ponente e instructor técnico:** Presenté un trabajo sobre modernización de sistemas legados en Python Sul (2022), impartí cursos de Python y formación en C# para desarrolladores procedentes de COBOL.
+

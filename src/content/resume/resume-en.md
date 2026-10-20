@@ -2,104 +2,97 @@
 lang: en
 ---
 
-[LinkedIn](https://www.linkedin.com/in/guionardo) · +55 (47) 98805-0705 · [guionardo@guionardofurlan.com.br](mailto:guionardo@guionardofurlan.com.br) · [GitHub](https://github.com/guionardo)
+[LinkedIn](https://www.linkedin.com/in/guionardo) · +55 (47) 98805-0705 · [guionardo@guionardofurlan.com.br](mailto:guionardo@guionardofurlan.com.br) · [GitHub](https://github.com/guionardo) · Brazil
 
-## Skills
+## Backend Software Engineer
 
-- GoLang, Python (Django, FastAPI, scripting), C#
-- Cloud & DevOps (MS Azure, GCP), System Design, Microservices, APIs, Docker, Linux
-- MySQL, MariaDB, PostgreSQL, SQL Server, SQLite, Oracle
-- Unit Testing & Integration Testing (TDD), Docker, Kubernetes, Bash, JavaScript, PHP, Virtualization, IoT (Raspberry Pi/Arduino), AI-assisted development
-- Languages: Portuguese (native), English (intermediate level)
+Backend engineer with 10+ years of software development experience, focused on Go, Python, and C#/.NET. Hands-on background in distributed systems, REST APIs, event-driven integration, enterprise platforms, and modernization of legacy systems. Delivered backend solutions in e-commerce logistics, fintech, and ERP environments. Interested in hands-on backend engineering roles with internationally distributed teams.
 
-## Experience
+## Technical Skills
 
-### Senior Software Engineer — WK Sistemas — Blumenau, BR (On-site/hybrid) — 11/2025 – 08/2026
+- *Languages & Frameworks:* Go (Golang), Python (Flask, FastAPI, Django), C#/.NET, Java, SQL, Bash
+- *Backend & Architecture:* REST APIs, Microservices, Event-Driven Systems, System Integration, Background Workers, Unit and Integration Testing
+- *Infrastructure & Cloud:* Linux, Docker, Kubernetes, Microsoft Azure, Google Cloud Platform (GCP), CI/CD
+- *Databases:* PostgreSQL, SQL Server, MySQL, MariaDB, SQLite, Oracle
+- *Languages Spoken:* Portuguese (native); English (B1 – Intermediate, technical communication)
+
+## Professional Experience
+
+### Senior Software Engineer — WK Sistemas — Blumenau, Brazil (Hybrid) — 11/2025 – 08/2026
 
 *WK Sistemas provides enterprise ERP and management solutions for businesses.*
 
-- Worked on the platform project designed as the foundation for the AI flow across WK's ERP software.
-- Developed robust APIs and background workers to integrate internal ERP data with third-party and external services.
-- Built core software components and packages that form the company's official SDK, providing the foundation for constructing new applications.
+- Developed APIs and background workers in Go and .NET/C# to integrate enterprise ERP data with internal and third-party services.
+- Built reusable core components and packages for the company's official SDK, supporting development of new platform applications.
+- Contributed to foundational platform services supporting AI-oriented workflows across the ERP ecosystem.
 
-*Tech Stack:* GoLang, .NET / C#, MS Azure, APIs, AI agents (Cursor/Claude).
+*Technologies:* Go, C#/.NET, Azure, REST APIs, Background Workers.
 
-### Senior Software Engineer — Mercado Livre — Florianópolis, BR (Remote/hybrid) — 08/2024 – 09/2025
+### Senior Software Engineer — Mercado Livre — Florianópolis, Brazil (Remote/Hybrid) — 08/2024 – 09/2025
 
 *Mercado Livre is the leading e-commerce and fintech ecosystem in Latin America.*
 
-- On the FBM-Fiscal team, developed applications in GoLang and Java for invoice orchestration, optimizing fulfillment logistics across regional platforms in Brazil, Chile, and Peru.
-- Enhanced team development efficiency by building custom mock libraries and specialized routing mechanisms.
-- Strengthened overall platform security by proactively handling and mitigating code vulnerabilities.
-- Contributed to technology updates and internal knowledge sharing, ensuring the team remained aligned with modern industry best practices.
+- Contributed as part of a larger engineering team to **Go** and **Java** services supporting fiscal invoice orchestration for fulfillment operations in Brazil, Chile, and Peru.
+- Worked across fiscal workflows for seller inbound, sales, distribution-center transfers, returns, and inventory losses, in an operation issuing over **200,000 invoices per hour**. This figure reflects the broader operation, not individual service throughput.
+- Built reusable mock libraries and specialized routing components to simplify development and testing.
+- Identified and remediated code vulnerabilities and contributed to technology modernization and knowledge sharing.
 
-*Tech Stack:* GoLang, Java, Microservices, System Design, REST APIs.
+*Technologies:* Go, Java, Microservices, REST APIs.
 
-### Senior Software Engineer — Levva — Campinas, BR (Remote) — 01/2024 – 08/2024
+### Senior Software Engineer — Levva — Campinas, Brazil (Remote) — 01/2024 – 08/2024
 
 *Levva is a software development consultancy focused on tailored digital solutions.*
 
-- Engineered contingency and data consolidation mechanisms for fintech platform [Jeitto.com.br](https://Jeitto.com.br), guaranteeing high data integrity and service availability.
-- Optimized financial collection processes, significantly reducing manual intervention and increasing operational performance.
-- Handled integrations across back-office operations, core-banking platforms, and internal services, streamlining data flow between systems.
+- Implemented contingency and data consolidation mechanisms for the Jeitto fintech platform, supporting data integrity and service availability.
+- Diagnosed a billing processing failure, implemented a hotfix, and monitored consolidation scripts through recovery; the reconciliation system processed over 300,000 invoices overnight.
+- Automated parts of financial collections workflows to reduce manual intervention.
+- Integrated back-office systems, core-banking platforms, and internal services using Python.
 
-*Tech Stack:* Python (Flask, scripting, Apache Airflow), Google Cloud.
+*Technologies:* Python, Flask, Apache Airflow, Google Cloud Platform.
 
-### Senior Software Engineer — AmbevTech — Blumenau, BR (On-site/hybrid) — 08/2019 – 01/2024
+### Senior Software Engineer — AmbevTech — Blumenau, Brazil (Hybrid) — 08/2019 – 01/2024
 
 *AmbevTech is the technology hub for AB InBev / Ambev, focusing on digital transformation and logistics.*
 
-- Developed microservices and APIs using Python and C# to extract, transform, and stream legacy ERP data into modern platform environments. These case became a reference for the company's transition from monolithic systems to microservices architecture and was presented at Python conferences.
-- Built custom Command Line Interface (CLI) tools that streamlined internal engineering workflows.
-- Conducted internal C# training sessions for COBOL developers, leading the technical transition of engineers into modern stacks.
-- Collaborated on project management and build/deployment automation within MS Azure.
+- Implemented event-driven data integration services using Python and C# to distribute data from a legacy COBOL ERP to modern consumers.
+- Developed schema validation and domain-based event routing, supporting delivery to APIs, message queues, and object storage.
+- Demonstrated processing throughput of approximately 90,000 events in five minutes in a development environment; this is not a production throughput claim.
+- Built CLI tools to streamline internal engineering workflows and delivered C# training for engineers transitioning from COBOL systems.
+- Contributed to build and deployment automation in Microsoft Azure and presented legacy modernization work at the Python Sul conference.
 
-*Tech Stack:* Python (Flask, FastAPI, pure Python), C# (core), MS Azure, Microservices, CLI, Docker, SQL Server, PostgreSQL.
+*Technologies:* Python, Flask, FastAPI, C#/.NET, Azure, Docker, SQL Server, PostgreSQL, Event-Driven Systems.
 
-### Software Developer — Philips — Blumenau, BR (On-site) — 03/2019 – 08/2019
+### Software Developer — Philips — Blumenau, Brazil (On-site) — 03/2019 – 08/2019
 
 *Philips Healthcare delivers clinical and administrative health management software (Tasy).*
 
-- Performed maintenance and feature development for the Healthcare Operators (ODS) module within the Tasy software suite.
-- This work involved addressing client requests, implementing new functionalities, and fixing bugs to ensure the system's continuity and improvement.
+- Maintained and extended the Tasy healthcare software, implementing features and bug fixes for the healthcare operators module.
 
-*Tech Stack:* Oracle PL/SQL, Java, JavaScript, Delphi.
+*Technologies:* Oracle PL/SQL, Java, JavaScript, Delphi.
 
-### Software Developer — Time Informatica — Blumenau, BR (On-site) — 09/2012 – 03/2019
+### Software Developer — Time Informática — Blumenau, Brazil (On-site) — 09/2012 – 03/2019
 
-*Time Informática provides commercial enterprise ERP systems and operational desktop tools.*
+*Time Informática develops commercial ERP, fiscal, and operational software for businesses.*
 
-- Developed and maintained commercial ERP systems, satellite tax applications (PAF-ECF), and client operational software.
-- Implemented and managed application servers to ensure operational stability and scalability.
-- Created automated internal tooling, including licensing servers and application telemetry, optimizing technical support and monitoring workflows.
+- Developed and maintained commercial ERP systems, fiscal applications, and operational desktop tools.
+- Managed application servers and built internal licensing and telemetry tools to support operations and troubleshooting.
 
-*Tech Stack:* Visual FoxPro, Lazarus/FPC, PHP, Python, Linux Server Automation, MySQL/MariaDB.
+*Technologies:* Visual FoxPro, Lazarus/FPC, PHP, Python, Linux, MySQL/MariaDB.
 
-## Projects
+## Selected Project
 
-### Escoteirando
-
-[GitHub](https://github.com/escoteirando)
-
-- Escoteirando Suite is a unified digital platform for the Brazilian Scout Association (UEB) that brings together the everyday tools scout leaders and families need to run their groups — in one coordinated ecosystem. Instead of a pile of disconnected apps, it offers a single, consistent experience where every product speaks the same language and shares the same login, so a scout leader moves seamlessly between managing their troop, planning activities, and tracking progress without relearning a new system each time.
-
-*This is a work-in-progress.*
+- *Escoteirando Suite* — [GitHub](https://github.com/escoteirando): Work-in-progress suite of applications for Brazilian scouting, integrating identity and tools for group management and activity planning.
 
 ## Education
 
-- Postgraduate Degree in Data Science & Big Data Analytics – Faculdade Metropolitana *(2020)*
-- Bachelor's Degree in Software Engineering – UniCesumar *(2016 – 2020)*
-- Bachelor's Degree in Physical Therapy – FURB *(1997 – 2001)*
-
-## Certifications
-
-- *Ultimate Go Programming* – O'Reilly (Bill Kennedy)
-- *Software Architecture Fundamentals* – [Desenvolvedor.io](https://desenvolvedor.io)
-- *Python: Advanced Design Patterns* – LinkedIn Learning
-- *Software Architecture: Patterns for Developers* – LinkedIn Learning
-- *Software Architecture: Breaking a Monolith into Microservices* – LinkedIn Learning
+- Bachelor's Degree in Software Engineering — UniCesumar (2016–2020)
+- Postgraduate Degree in Data Science & Big Data Analytics — Faculdade Metropolitana (2020)
 
 ## Volunteering & Community
 
-- *Scout Leader (GE Leões de Blumenau)* *(2018 – Present)*: Team management, leadership development, social skills fostering, and youth activity planning.
-- *Speaker / Instructor*: Delivered C# training for legacy teams (AmbevTech, 2023), Python courses (Uniasselvi, 2022), and Python Sul conference speaker on "Data Extraction from Monoliths to Microservices" (2022).
+- **Volunteer Scout Leader — Grupo Escoteiro Leões de Blumenau (2018–Present):** Volunteer in youth education through Scouting, supporting educational activities, teamwork, practical learning, and personal development.
+- **Technical Speaker & Instructor:** Presented legacy modernization work at Python Sul (2022), taught Python courses, and delivered C# training for developers transitioning from COBOL.
+
+## Professional Development
+
+- Selected coursework: Ultimate Go Programming (O'Reilly); Software Architecture Fundamentals; Python: Advanced Design Patterns.
