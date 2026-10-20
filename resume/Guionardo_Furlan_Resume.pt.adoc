@@ -22,7 +22,7 @@ Engenheiro de software com mais de 10 anos de experiência em desenvolvimento, c
 * *Backend e arquitetura:* APIs REST, Microsserviços, Sistemas orientados a eventos, Integrações, Workers, Testes unitários e de integração
 * *Infraestrutura e nuvem:* Linux, Docker, Kubernetes, Microsoft Azure, Google Cloud Platform (GCP), CI/CD
 * *Bancos de dados:* PostgreSQL, SQL Server, MySQL, MariaDB, SQLite, Oracle
-* *Idiomas:* Português (nativo); Inglês (leitura, escrita e comunicação técnica)
+* *Idiomas:* Português (nativo); Inglês (B1 – intermediário, comunicação técnica)
 
 == Experiência Profissional
 
