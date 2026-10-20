@@ -177,6 +177,86 @@ de leitura sai das minhas costas; a responsabilidade final continua minha.
 
 ---
 
+## Em ação: uma conversa com o agente
+
+A teoria é bonita. Na prática, o ciclo começa com uma frase simples.
+
+### O prompt
+
+```
+verifique os erros no ambiente de produção
+```
+
+Isso é tudo. Nenhum ID, nenhum link, nenhum copy-paste de stack trace.
+
+### O que o agente faz sozinho
+
+O agente carrega as variáveis de ambiente (`X_API_TOKEN`, `X_API_URL`), monta
+as chamadas e consulta a API diretamente:
+
+```bash
+# 1. Erros abertos — o que precisa de atenção agora
+curl -s -H "X-API-Token: $X_API_TOKEN" \
+  "$X_API_URL/api/request_errors/?status=AB&limit=20"
+
+# 2. Erros em análise — alguém já olhou?
+curl -s -H "X-API-Token: $X_API_TOKEN" \
+  "$X_API_URL/api/request_errors/?status=AN&limit=10"
+
+# 3. Todos os erros — panorama completo
+curl -s -H "X-API-Token: $X_API_TOKEN" \
+  "$X_API_URL/api/request_errors/?limit=500"
+```
+
+### A resposta do agente
+
+Em segundos, ele devolve uma análise estruturada:
+
+**Dashboard de Erros — Produção (Fly.io)**
+
+| Métrica | Valor |
+|---------|-------|
+| **Total** | 3 |
+| 🟢 Abertos | 0 |
+| 🟡 Analisados | 1 |
+| 🔵 Corrigidos | 2 |
+
+| ID | Data | Exceção | Endpoint | Status | Usuário | Boot ID |
+|---|---|---|---|---|---|---|
+| 3 | 15/10 11:50 | `FileNotFoundError` | `manual_operacao` | AN | guionardo | 1792075704 |
+| 2 | 08/10 13:23 | `OperationalError` (database is locked) | `editora_pedidoitem_delete` | CO | Mara | 1790299626 |
+| 1 | 09/09 10:39 | `FieldError` (icontains em FK) | `editora_contato_changelist` | CO | Akauana | 1788617182 |
+
+### Diagnóstico por erro
+
+**#3 — FileNotFoundError**
+> A view `manual_operacao` tentou abrir `../../docs/MANUAL_OPERACIONAL.md` a
+> partir de `/app/editora/views/`. No container Fly.io, o path relativo não
+> resolve. O arquivo provavelmente não foi incluído na imagem Docker.
+> *Sugestão: usar path absoluto via settings ou incluir o arquivo no build.*
+
+**#2 — database is locked**
+> Lock de escrita no SQLite durante exclusão de `PedidoItem` pelo admin. O
+> traceback corta nos frames do projeto — neste caso, o relevante é
+> `django/db/backends/sqlite3/base.py:360`, onde o lock estourou depois de
+> 30 segundos. Como foi erro isolado, indica transação longa, não evento
+> sistêmico.
+> *Sugestão: monitorar recorrência; investigar transações em `exclusoes.py`.*
+
+**#1 — FieldError**
+> Busca `q=luana` no admin de Contato usou `icontains` em ForeignKey. O Django
+> rejeita lookup `icontains` direto em FK. 
+> *Sugestão: revisar `search_fields` do admin, usar `cliente__nome__icontains`.*
+
+### O ponto que importa
+
+O usuário não precisou abrir uma tela, não copiou nada, não traduziu
+`boot_id` para data de deploy. O agente fez a ponte entre a pergunta em
+linguagem natural e os comandos estruturados na API. O humano recebeu
+contexto, hipóteses e ações sugeridas — não um JSON cru.
+
+---
+
 ## O que eu aprendi
 
 1. **Expor erro em JSON é expor stack trace, nome de arquivo e contexto de
