@@ -292,6 +292,130 @@ limitations coherent with the budget and the project's size, not a lack of time:
 
 ---
 
+## Sanitizing stack traces: what to cut, what to keep
+
+A reader asked exactly what matters: *"The moment you automate that loop,
+secrets start leaking if you're not careful. How do you decide what gets
+truncated without dropping the frames that actually point at the bug?"*
+
+The short answer: **full storage, minimal delivery.**
+
+### The problem: a Django traceback is a document in bad faith
+
+Look at a typical production exception traceback. The first lines are Django
+re-raising the error: `asgiref`, `django/core/handlers/base.py`,
+`django/db/backends`. Then comes your code. Then Django re-raises again. The
+**real** error is hidden in the middle of 80 lines of framework.
+
+The first version of the API cut the last 40 lines. The agent received almost
+only Django code. It saw `execute_sql`, `thread_handler`, `sync.py` — and
+couldn't find my code's line. **Delivering the wrong stack is the same as
+delivering no stack at all.**
+
+### The strategy: keep project frames (which sit at the top)
+
+The decision wasn't "cut from the start" or "cut from the end". It was:
+**identify what's mine and preserve it.**
+
+In Django, your project's frames sit at the **top** of the stack — before Django
+starts re-raising. So the logic became:
+
+1. **Find project frames** — lines containing `/editora/` or `/editor_site/`
+2. **Keep them at the top**, with the code line right below
+3. **No project frames?** Fall back to the last 40 lines — where the `raise` is
+
+```python
+TRACEBACK_LINES = 40
+MARCADORES_APP = ('/editora/', '/editor_site/')
+
+def truncar_traceback(traceback: str, max_linhas: int = TRACEBACK_LINES) -> str:
+    if not traceback:
+        return ''
+    linhas = traceback.splitlines()
+    if len(linhas) <= max_linhas:
+        return traceback
+
+    # Find all frames that belong to our project
+    frames = [
+        i
+        for i, linha in enumerate(linhas)
+        if linha.lstrip().startswith('File ')
+        and any(m in linha for m in MARCADORES_APP)
+    ]
+
+    # No project frames? Take the end — where the raise is
+    if not frames:
+        return '\n'.join(linhas[-max_linhas:])
+
+    # Collect frame + the code line right below
+    escolhidas = {0}  # line 0 = "Traceback (most recent call last):"
+    for i in frames:
+        escolhidas.add(i)
+        if i + 1 < len(linhas):
+            escolhidas.add(i + 1)
+
+    # If over limit, cut from the start (project frames)
+    if len(escolhidas) > max_linhas:
+        return '\n'.join(linhas[:max_linhas])
+
+    return '\n'.join(linhas[i] for i in sorted(escolhidas))
+```
+
+### How it works in practice
+
+**Error #3 — FileNotFoundError:** the raw traceback is ~25 lines. The first 15
+are Django. Line 16 is:
+
+```
+  File "/app/editora/views/manual_operacao.py", line 44, in manual_operacao_view
+    with open(MANUAL_FILE, encoding='utf-8') as f:
+```
+
+The logic keeps only those 2 lines + the header. The agent immediately sees:
+*"Error in `manual_operacao` view, line 44, trying to open a file."*
+
+**Error #2 — database is locked:** here there are no project frames in the
+traceback. The logic falls back to the last-40-lines fallback. The agent gets
+`django/db/backends/sqlite3/base.py:360 in execute` — correct, because the bug
+isn't in our code, it's in the interaction with SQLite.
+
+### Where secrets actually live
+
+The reader was right: the danger isn't in the stack trace, it's in the **request
+context**. The middleware stores the full context — including `session` (allows
+session hijacking) and `body` (may contain passwords). The API removes:
+
+```python
+CAMPOS_SENSIVEIS = ('session', 'body')
+
+def limpar_contexto(contexto: dict | None) -> dict:
+    if not contexto:
+        return {}
+    return {k: v for k, v in contexto.items() if k not in CAMPOS_SENSIVEIS}
+```
+
+**What remains:** `method`, `params`, `user_agent`, `referer`, `headers` —
+enough for the agent to understand *"it was an admin POST, CSRF token, user
+Mara"* without exposing data that enables session hijacking.
+
+### The general principle
+
+| Layer | What it stores | Who accesses |
+|-------|---------------|--------------|
+| Database | Full traceback + context with session/body | Human support screen |
+| API | Truncated traceback (project frames) + context without session/body | AI agent |
+
+> **Full storage, minimal delivery.** The database stores everything because a
+> human in support may need it. The API delivers only what an agent needs to
+> diagnose, and nothing more.
+
+Deciding how to cut the stack trace is a **product decision**, not an
+engineering one. You're choosing: who will read it, what is noise, and what is
+signal. The agent doesn't fail for lack of intelligence; it fails because the
+tool delivered the wrong map.
+
+---
+
 ## Conclusion
 
 Building an error API for AI agents looked like a "how do I expose this as JSON"
