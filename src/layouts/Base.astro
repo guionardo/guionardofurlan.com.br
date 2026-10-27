@@ -49,7 +49,12 @@ const enableGa = Boolean(gaId) && import.meta.env.PROD;
     <meta name="twitter:card" content="summary_large_image" />
     {enableGa && <>
       <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
-      <script is:inline>{`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${gaId}');`}</script>
+      <script define:vars={{ gaId }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', gaId);
+      </script>
     </>}
   </head>
   <body>
