@@ -7,6 +7,8 @@ tags: [python, performance]
 draft: false
 lang: en
 translationKey: fast-folder-iteration-python
+heroImage: /images/fast-folder-iteration-in-python/header.jpg
+heroImageAlt: 'Organized archival boxes on shelves, a visual metaphor for traversing many files.'
 ---
 
 ## The problem
@@ -131,4 +133,5 @@ There is no universal winner. The cost depends on the operating system, file sys
 - [`os` documentation](https://docs.python.org/3/library/os.html)
 - [`glob` documentation](https://docs.python.org/3/library/glob.html)
 - [`pathlib` documentation](https://docs.python.org/3/library/pathlib.html)
+- [International Committee of the Red Cross archives image](https://en.wikipedia.org/wiki/International_Committee_of_the_Red_Cross_archives), used in the original article
 - [Benchmark repository](https://github.com/guionardo/python-folder-iteration)
