@@ -2,7 +2,7 @@
 title: 'El problema de los backups consistentes en Kubernetes'
 description: 'Cómo backups independientes de control plane y PVs se convirtieron en recovery sets con identidad exacta y una ventana de consistencia medida en 64 segundos.'
 date: 2026-09-20
-slug: backups-consistentes
+slug: backups-consistentes-es
 tags: [kubernetes, homelab, backup, disaster-recovery]
 draft: false
 lang: es
