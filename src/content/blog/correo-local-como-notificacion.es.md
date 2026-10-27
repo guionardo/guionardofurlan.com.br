@@ -4,7 +4,7 @@ description: 'Cómo usar el buzón local de Linux para conservar notificaciones 
 date: 2022-05-04
 slug: correo-local-como-notificacion
 tags: [linux, terminal, notificaciones]
-draft: true
+draft: false
 lang: es
 translationKey: local-mail-notifications
 ---

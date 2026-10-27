@@ -4,7 +4,7 @@ description: 'How to use a Linux host local mailbox to keep cron and script noti
 date: 2022-05-04
 slug: local-mail-as-notification
 tags: [linux, terminal, notifications]
-draft: true
+draft: false
 lang: en
 translationKey: local-mail-notifications
 ---

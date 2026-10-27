@@ -4,7 +4,7 @@ description: 'Como usar o e-mail local do Linux para guardar notificações de c
 date: 2022-05-04
 slug: email-local-como-notificacao
 tags: [linux, terminal, notificacoes]
-draft: true
+draft: false
 lang: pt
 translationKey: local-mail-notifications
 ---
