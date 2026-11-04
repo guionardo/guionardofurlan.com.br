@@ -2,7 +2,7 @@
 title: 'Depurando PHP 5.1, 5.4 e 8.5 com Dev Containers modernos do VS Code'
 description: 'Como criar ambientes PHP reutilizáveis, separar runtimes legados de um editor moderno e validar breakpoints reais do Xdebug.'
 date: 2026-11-04
-draft: true
+draft: false
 tags: [php, docker, vscode, devcontainers, xdebug]
 lang: pt
 translationKey: debugging-legacy-php-with-dev-containers
