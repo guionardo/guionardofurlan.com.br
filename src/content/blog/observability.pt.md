@@ -165,7 +165,7 @@ Esse tipo de decisão é outro benefício de construir o ambiente aos poucos: a 
 
 ## O resultado que realmente importava
 
-No final, a validação deixou de ser "Grafana abriu?" e passou a verificar o caminho completo:
+No final, a validação deixou de ser “Grafana abriu?” e passou a verificar o caminho completo:
 
 ```mermaid
 flowchart LR

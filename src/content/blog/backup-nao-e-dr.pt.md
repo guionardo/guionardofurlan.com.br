@@ -1,6 +1,6 @@
 ---
 title: 'Backup não significa Disaster Recovery'
-description: 'Backup existente não é Disaster Recovery: o que três restores reais revelaram sobre control plane, PersistentVolumes, imagens OCI e recuperação offline.'
+description: 'Backup existente não é Disaster Recovery: o que restores reais revelaram sobre control plane, PersistentVolumes, imagens OCI e recuperação offline.'
 date: 2026-09-20
 slug: backup-nao-e-dr
 tags: [kubernetes, homelab, disaster-recovery]
