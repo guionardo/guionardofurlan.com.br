@@ -14,25 +14,24 @@ Propostas de artigos podem ser abertas como issues usando o modelo
   precisam ser preservados;
 - o destino, com `blog` para um post comum ou `series:<seriesKey>` para um
   post associado a uma série existente;
-- os três arquivos do artigo anexados: um nome terminado em `.pt.md`, outro
-  em `.en.md` e outro em `.es.md`;
-- imagens e outros anexos usados pelo artigo, também enviados na issue.
+- os três artigos completos no texto da issue, em blocos de código identificados
+  como `Artigo pt`, `Artigo en` e `Artigo es`;
+- URLs acessíveis para imagens e outros arquivos usados pelo artigo.
 
 O corpo do artigo deve ser Markdown compatível com Astro: frontmatter YAML
 entre `---`, seguido diretamente de conteúdo iniciado em `##` (o layout já
 renderiza o título). Cada idioma precisa declarar `title`, `description`,
 `date`, `slug`, `tags`, `draft: true`, `lang` e a mesma `translationKey`; os
 slugs devem ser minúsculos, ASCII e separados por hífens. Preserve comandos,
-nomes próprios e URLs. Imagens devem ser referenciadas por nome relativo no
-Markdown e ter texto alternativo útil; não use H1, links fictícios ou
-placeholders.
+nomes próprios e URLs. Como a issue não transporta arquivos binários, imagens
+e anexos devem usar URLs já acessíveis no Markdown, com texto alternativo útil.
+Não use H1, links fictícios ou placeholders.
 
-O workflow valida a descrição, os anexos e os metadados, cria os arquivos no
-destino indicado, copia as imagens para `public/images/<translationKey>/`,
-e os demais anexos para `public/attachments/<translationKey>/`,
-executa `npm run build`, abre uma branch `article/issue-<número>` e cria um
-pull request para `main`. Uma issue inválida não cria PR. A revisão editorial
-continua obrigatória; abrir a issue não publica o artigo.
+O workflow valida a descrição, os três blocos de Markdown e os metadados,
+cria os arquivos no destino indicado, executa `npm run build`, abre uma branch
+`article/issue-<número>` e cria um pull request para `main`. Uma issue inválida
+não cria PR. A revisão editorial continua obrigatória; abrir a issue não
+publica o artigo.
 
 Agentes que suportam skills podem usar `skills/publish-blog-article/SKILL.md`
 para preparar e enviar a proposta seguindo este fluxo.

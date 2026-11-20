@@ -28,27 +28,48 @@ Destino: series:<seriesKey>
 Para outra seção ainda não suportada pelo workflow, descreva o destino e aguarde
 a orientação antes de abrir a issue.
 
-## Arquivos anexos
+## Artigo pt
 
-Arraste para esta seção os três Markdown completos e quaisquer imagens ou
-arquivos usados pelo texto. Os nomes dos artigos devem terminar em:
+Cole o artigo completo em um bloco de código com quatro crases. Use cinco ou
+mais crases se o próprio artigo tiver um bloco com quatro crases:
 
-```text
-<identificador>.pt.md
-<identificador>.en.md
-<identificador>.es.md
-```
+````markdown
+---
+title: 'Título em português'
+description: 'Descrição específica.'
+date: 2026-11-20
+slug: titulo-em-portugues
+tags: [desenvolvimento]
+draft: true
+lang: pt
+translationKey: identificador-estavel
+---
+
+## Primeiro subtítulo
+
+Texto do artigo.
+````
+
+## Artigo en
+
+Cole a versão inglesa completa usando o mesmo formato e a mesma
+`translationKey`, mas com `lang: en`.
+
+## Artigo es
+
+Cole a versão espanhola completa usando o mesmo formato e a mesma
+`translationKey`, mas com `lang: es`.
 
 Cada artigo deve conter frontmatter YAML com `title`, `description`, `date`,
 `slug`, `tags`, `draft: true`, `lang` e `translationKey`. O corpo deve começar
 em `##`, sem H1, e usar Markdown compatível com Astro. A mesma
-`translationKey` deve aparecer nos três arquivos. Imagens devem ter alt text e
-ser referenciadas pelo nome do arquivo anexado.
+`translationKey` deve aparecer nos três blocos. Imagens devem ter alt text e
+usar URLs acessíveis; a issue não aceita anexos binários.
 
 ## Checklist
 
 - [ ] A descrição explica a proposta e suas fontes.
 - [ ] O destino está preenchido.
-- [ ] Anexei os artigos em PT, EN e ES.
-- [ ] Anexei todas as imagens e arquivos necessários.
+- [ ] Colei os artigos completos em PT, EN e ES.
+- [ ] As imagens e os demais arquivos usados têm URLs acessíveis.
 - [ ] Não incluí segredos, credenciais ou dados privados.

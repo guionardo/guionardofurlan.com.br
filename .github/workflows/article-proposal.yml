@@ -43,7 +43,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/content public/images public/attachments
+          git add src/content
           git commit -m "content: add article proposal from issue #${ISSUE_NUMBER}"
           git push --set-upstream origin "article/issue-${ISSUE_NUMBER}"
 

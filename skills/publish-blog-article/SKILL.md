@@ -24,8 +24,8 @@ Read the current requirements before preparing the issue:
 
 When the user explicitly authorizes submission:
 
-1. Prepare the article as three complete Markdown files, one for each suffix:
-   `.pt.md`, `.en.md`, and `.es.md`.
+1. Prepare the article as three complete Markdown texts, one for each language:
+   `pt`, `en`, and `es`.
 2. Keep the same `translationKey` in all three files. Each file must declare
    `title`, `description`, `date`, `slug`, `tags`, `draft: true`, `lang`, and
    `translationKey` in YAML frontmatter.
@@ -33,9 +33,12 @@ When the user explicitly authorizes submission:
    sources, caveats, and useful image alt text.
 4. Ask for or infer the destination only when unambiguous: `blog` or an
    existing `series:<seriesKey>`.
-5. Attach the three Markdown files and every image or other file referenced by
-   them to a new GitHub issue. Use a title beginning with `[artigo]` and include
-   the destination and a concise description in the issue body.
+5. Put the three Markdown texts in the issue body under `## Artigo pt`,
+   `## Artigo en`, and `## Artigo es`, each inside a fenced code block using at
+   least four backticks. Use a title beginning with `[artigo]` and include the
+   destination and a concise description in the issue body. Images and other
+   assets must be referenced by accessible URLs; GitHub issue attachments are
+   not part of this workflow.
 
 Do not claim that the article was published. Opening the issue starts review;
 the generated pull request still requires review and merge.
@@ -46,7 +49,7 @@ the generated pull request still requires review and merge.
 - Do not add secrets, credentials, private data, or unlicensed third-party
   material.
 - Do not invent missing translations, facts, sources, or personal experiences.
-- If one of the three language versions or a required attachment is missing,
+- If one of the three language versions or a required asset URL is missing,
   stop and report the missing item instead of submitting a partial issue.
 - If the destination is not `blog` or an existing series, report that the
   repository workflow does not support it yet.
