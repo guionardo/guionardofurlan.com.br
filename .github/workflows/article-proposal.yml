@@ -19,25 +19,38 @@ jobs:
         with:
           ref: main
 
-      - name: Create proposal branch
+      - name: Select proposal branch
+        id: branch
         env:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
-        run: git switch -c "article/issue-${ISSUE_NUMBER}"
+        run: |
+          branch="article/issue-${ISSUE_NUMBER}"
+          if git fetch origin "refs/heads/${branch}:refs/remotes/origin/${branch}"; then
+            git switch -c "${branch}" --track "origin/${branch}"
+            echo "existing=true" >> "$GITHUB_OUTPUT"
+          else
+            git switch -c "${branch}"
+            echo "existing=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Validate issue and create files
         id: article
+        if: steps.branch.outputs.existing != 'true'
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: node .github/scripts/process-article-issue.mjs
 
       - name: Install dependencies
+        if: steps.branch.outputs.existing != 'true'
         run: npm ci
 
       - name: Validate Astro build
+        if: steps.branch.outputs.existing != 'true'
         run: npm run build
 
       - name: Commit and push proposal
+        if: steps.branch.outputs.existing != 'true'
         env:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
