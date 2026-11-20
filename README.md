@@ -33,6 +33,14 @@ cria os arquivos no destino indicado, executa `npm run build`, abre uma branch
 não cria PR. A revisão editorial continua obrigatória; abrir a issue não
 publica o artigo.
 
+Para permitir que o workflow abra o PR, habilite no repositório GitHub a opção
+**Settings → Actions → General → Workflow permissions → Allow GitHub Actions to
+create and approve pull requests**. O workflow já declara `contents: write` e
+`pull-requests: write`, mas essa opção do repositório é uma permissão adicional
+exigida pelo GitHub. Se a validação passar e a abertura do PR falhar por esse
+motivo, habilite a opção e reexecute o job falho; a branch e o commit já terão
+sido criados.
+
 Agentes que suportam skills podem usar `skills/publish-blog-article/SKILL.md`
 para preparar e enviar a proposta seguindo este fluxo.
 
