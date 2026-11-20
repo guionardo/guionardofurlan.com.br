@@ -1,0 +1,8 @@
+interface:
+  display_name: Publish blog article
+  short_description: Submit a complete article proposal through GitHub
+  default_prompt: >-
+    Prepare and submit this article to the Guionardo Furlan blog by following
+    the repository's article proposal workflow. Create the PT, EN, and ES
+    Markdown attachments, include referenced assets, and open the GitHub issue
+    only after validating the requirements.

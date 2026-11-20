@@ -5,6 +5,73 @@ Portal estático em Astro, com artigos em Markdown e publicação automática pe
 Agentes de IA devem seguir [AGENTS.md](AGENTS.md). Todo novo conteúdo público
 deve ser entregue em português e inglês, com atualizações sincronizadas.
 
+## Propor artigos por issue
+
+Propostas de artigos podem ser abertas como issues usando o modelo
+`.github/ISSUE_TEMPLATE/article-proposal.md`. A issue deve conter:
+
+- uma descrição clara da proposta, incluindo fatos, fontes e ressalvas que
+  precisam ser preservados;
+- o destino, com `blog` para um post comum ou `series:<seriesKey>` para um
+  post associado a uma série existente;
+- os três arquivos do artigo anexados: um nome terminado em `.pt.md`, outro
+  em `.en.md` e outro em `.es.md`;
+- imagens e outros anexos usados pelo artigo, também enviados na issue.
+
+O corpo do artigo deve ser Markdown compatível com Astro: frontmatter YAML
+entre `---`, seguido diretamente de conteúdo iniciado em `##` (o layout já
+renderiza o título). Cada idioma precisa declarar `title`, `description`,
+`date`, `slug`, `tags`, `draft: true`, `lang` e a mesma `translationKey`; os
+slugs devem ser minúsculos, ASCII e separados por hífens. Preserve comandos,
+nomes próprios e URLs. Imagens devem ser referenciadas por nome relativo no
+Markdown e ter texto alternativo útil; não use H1, links fictícios ou
+placeholders.
+
+O workflow valida a descrição, os anexos e os metadados, cria os arquivos no
+destino indicado, copia as imagens para `public/images/<translationKey>/`,
+e os demais anexos para `public/attachments/<translationKey>/`,
+executa `npm run build`, abre uma branch `article/issue-<número>` e cria um
+pull request para `main`. Uma issue inválida não cria PR. A revisão editorial
+continua obrigatória; abrir a issue não publica o artigo.
+
+Agentes que suportam skills podem usar `skills/publish-blog-article/SKILL.md`
+para preparar e enviar a proposta seguindo este fluxo.
+
+### Instalar a skill
+
+Depois que este repositório estiver publicado no GitHub, use uma destas
+opções em uma máquina nova. O repositório privado exige autenticação GitHub.
+
+#### Codex
+
+O instalador do Codex copia a skill para `~/.codex/skills/`:
+
+```sh
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo guionardo/guionardofurlan.com.br \
+  --path skills/publish-blog-article
+```
+
+#### Claude Code e OpenCode
+
+Os dois agentes reconhecem o formato padrão `SKILL.md`. O diretório global do
+Claude Code também é aceito pelo OpenCode, então a mesma cópia atende aos dois:
+
+```sh
+skill_tmp="$(mktemp -d)"
+git clone --depth 1 https://github.com/guionardo/guionardofurlan.com.br.git "$skill_tmp/portal"
+mkdir -p ~/.claude/skills
+cp -R "$skill_tmp/portal/skills/publish-blog-article" ~/.claude/skills/
+```
+
+No Claude Code, a skill pode ser chamada como `/publish-blog-article`. No
+OpenCode, inicie uma nova sessão e use `@publish-blog-article` ou deixe o
+agente selecioná-la pelo contexto. Para instalar somente no projeto, copie a
+pasta para `.claude/skills/` (Claude Code) ou `.opencode/skills/` (OpenCode).
+
+Documentação: [skills do Claude Code](https://code.claude.com/docs/en/skills) e
+[skills do OpenCode](https://opencode.ai/docs/skills).
+
 ## Desenvolvimento
 
 Requer Node.js 22.12 ou superior.

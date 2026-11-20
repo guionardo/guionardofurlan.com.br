@@ -1,0 +1,58 @@
+name: Article proposal
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  prepare:
+    if: contains(github.event.issue.title, '[artigo]') || contains(github.event.issue.body, '## Destino')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Create proposal branch
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: git switch -c "article/issue-${ISSUE_NUMBER}"
+
+      - name: Validate issue and create files
+        id: article
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: node .github/scripts/process-article-issue.mjs
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate Astro build
+        run: npm run build
+
+      - name: Commit and push proposal
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content public/images public/attachments
+          git commit -m "content: add article proposal from issue #${ISSUE_NUMBER}"
+          git push --set-upstream origin "article/issue-${ISSUE_NUMBER}"
+
+      - name: Open pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: >-
+          gh pr create --base main --head "article/issue-${ISSUE_NUMBER}"
+          --title "${ISSUE_TITLE}"
+          --body "Closes #${ISSUE_NUMBER}. Generated from the article proposal issue."
