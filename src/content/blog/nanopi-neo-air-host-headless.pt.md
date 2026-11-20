@@ -4,7 +4,7 @@ description: 'Como instalar o Debian 13 na eMMC da NanoPi NEO Air, configurar Wi
 date: 2026-11-15
 slug: nanopi-neo-air-host-headless
 tags: [nanopi, allwinner-h3, debian, emmc, linux, embarcados, wifi]
-draft: true
+draft: false
 lang: pt
 translationKey: nanopi-neo-air-host-headless
 ---

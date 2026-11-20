@@ -4,7 +4,7 @@ description: 'Instala Debian 13 en la eMMC de la NanoPi NEO Air, configura Wi-Fi
 date: 2026-11-15
 slug: nanopi-neo-air-debian-13-sin-pantalla
 tags: [nanopi, allwinner-h3, debian, emmc, linux, sistemas-embebidos, wifi]
-draft: true
+draft: false
 lang: es
 translationKey: nanopi-neo-air-host-headless
 ---
