@@ -150,6 +150,8 @@ cada push, conforme a configuração de branches no painel.
 
 - Comando de build: `npm run build` (ou `npm run run`).
 - Saída estática: `dist/`, incluindo os currículos de `public/resume/`.
+- O `wrangler.jsonc` configura o Worker como site estático e aponta os assets
+  publicados para `dist/`.
 - O comando de deploy, as branches e o domínio são gerenciados no Cloudflare.
 - Não há workflow de GitHub Actions neste projeto. Não recrie uma publicação
   paralela por Actions ou GitHub Pages.
@@ -233,4 +235,6 @@ Use `npm run build` (ou `npm run run`). O comando compila o site com Astro e
 inclui os PDFs já versionados em `public/resume/` na saída `dist/resume/`.
 `npm run build:site` é um alias para executar diretamente o build do Astro.
 Nenhum desses comandos gera os currículos ou exige Asciidoctor/Chrome.
-O comando de deploy do Worker permanece o configurado no Cloudflare.
+O comando de deploy do Worker permanece o configurado no Cloudflare; o
+`wrangler.jsonc` informa ao `npx wrangler versions upload` que `dist/` é o
+diretório de assets estáticos.
